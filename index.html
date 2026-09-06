@@ -29,69 +29,6 @@
         href="style.css"
     >
 
-    <style>
-
-        /* =========================================
-           SPACING + POSITION FIXES
-        ========================================= */
-
-        /* Keep the hero button centered */
-        .hero-content {
-            width: 100%;
-            display: flex;
-            justify-content: center !important;
-            align-items: center;
-            text-align: center;
-            transform: translateY(-18px);
-        }
-
-        .hero-content .primary-button {
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-
-        /* Categories directly under the banner */
-        .categories-section {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
-        }
-
-
-        /* Remove empty category heading space */
-        .categories-section .section-heading {
-            display: none;
-        }
-
-
-        /* Category cards start immediately */
-        .category-slider {
-            margin-top: 0 !important;
-        }
-
-
-        /* Products directly under categories */
-        .products-section {
-            padding-top: 0 !important;
-        }
-
-
-        /* Remove empty product heading space */
-        .products-section .section-heading {
-            min-height: 0 !important;
-        }
-
-
-        /* =========================================
-           WHOLE WEBSITE 90%
-        ========================================= */
-
-        html {
-            zoom: 85%;
-        }
-
-    </style>
-
 </head>
 
 
@@ -257,6 +194,7 @@
             id="close-menu"
             class="close-button"
             type="button"
+            aria-label="Close menu"
         >
             ×
         </button>
@@ -311,6 +249,7 @@
             id="search-close"
             class="close-button"
             type="button"
+            aria-label="Close search"
         >
             ×
         </button>
@@ -343,6 +282,7 @@
                 id="search-input"
                 type="search"
                 placeholder="گەڕان بۆ بەرهەم..."
+                autocomplete="off"
             >
 
         </div>
@@ -378,9 +318,15 @@
 >
 
 
-    <div class="hero-background"></div>
+    <div
+        class="hero-background"
+        aria-hidden="true"
+    ></div>
 
-    <div class="hero-overlay"></div>
+    <div
+        class="hero-overlay"
+        aria-hidden="true"
+    ></div>
 
 
     <div class="hero-content">
@@ -393,7 +339,7 @@
 
             کڕین ئێستا
 
-            <span>
+            <span aria-hidden="true">
                 ←
             </span>
 
@@ -403,7 +349,10 @@
     </div>
 
 
-    <div class="scroll-indicator">
+    <div
+        class="scroll-indicator"
+        aria-hidden="true"
+    >
         ↓
     </div>
 
@@ -453,7 +402,7 @@
 
             <div class="category-icon">
 
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
 
                     <path
                         d="M10 43c8-1 13-5 16-14l3-8 9 9c3 3 7 5 14 6 3 1 4 4 2 7-2 3-7 4-13 4H13c-4 0-5-2-3-4Z"
@@ -494,7 +443,7 @@
 
             <div class="category-icon">
 
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
 
                     <path
                         d="M25 10l-10 7-8 18 10 4 4-8v23h26V31l4 8 10-4-8-18-10-7-9 9-9-9Z"
@@ -535,7 +484,7 @@
 
             <div class="category-icon">
 
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
 
                     <path
                         d="M7 25h50v14H7z"
@@ -584,7 +533,7 @@
 
             <div class="category-icon">
 
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
 
                     <path
                         d="M23 10l9 7 9-7 13 8-7 12-6-4v28H23V26l-6 4-7-12 13-8Z"
@@ -621,7 +570,7 @@
 
             <div class="category-icon">
 
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
 
                     <path
                         d="M12 23h40l-3 31H15l-3-31Z"
@@ -712,6 +661,7 @@
                 <button
                     class="wishlist-button"
                     type="button"
+                    aria-label="Add to wishlist"
                 >
                     ♡
                 </button>
@@ -719,6 +669,7 @@
 
                 <div
                     class="product-image product-one"
+                    aria-hidden="true"
                 >
 
                     <span class="new-badge rabar">
@@ -747,6 +698,7 @@
                             type="button"
                             data-product="تی شێرت بالەنسیگا"
                             data-price="450"
+                            aria-label="Add تی شێرت بالەنسیگا to cart"
                         >
                             +
                         </button>
@@ -766,6 +718,7 @@
                 <button
                     class="wishlist-button"
                     type="button"
+                    aria-label="Add to wishlist"
                 >
                     ♡
                 </button>
@@ -773,6 +726,7 @@
 
                 <div
                     class="product-image product-two"
+                    aria-hidden="true"
                 >
 
                     <span class="new-badge rabar">
@@ -801,6 +755,7 @@
                             type="button"
                             data-product="نایک ایر فورس"
                             data-price="120"
+                            aria-label="Add نایک ایر فورس to cart"
                         >
                             +
                         </button>
@@ -820,6 +775,7 @@
                 <button
                     class="wishlist-button"
                     type="button"
+                    aria-label="Add to wishlist"
                 >
                     ♡
                 </button>
@@ -827,6 +783,7 @@
 
                 <div
                     class="product-image product-three"
+                    aria-hidden="true"
                 >
 
                     <span class="new-badge rabar">
@@ -855,6 +812,7 @@
                             type="button"
                             data-product="کەمیزی لۆی ڤیتۆن"
                             data-price="620"
+                            aria-label="Add کەمیزی لۆی ڤیتۆن to cart"
                         >
                             +
                         </button>
@@ -874,6 +832,7 @@
                 <button
                     class="wishlist-button"
                     type="button"
+                    aria-label="Add to wishlist"
                 >
                     ♡
                 </button>
@@ -881,6 +840,7 @@
 
                 <div
                     class="product-image product-four"
+                    aria-hidden="true"
                 >
 
                     <span class="new-badge rabar">
@@ -909,6 +869,7 @@
                             type="button"
                             data-product="جاکەتی پڕیمیۆم"
                             data-price="580"
+                            aria-label="Add جاکەتی پڕیمیۆم to cart"
                         >
                             +
                         </button>
@@ -928,6 +889,7 @@
                 <button
                     class="wishlist-button"
                     type="button"
+                    aria-label="Add to wishlist"
                 >
                     ♡
                 </button>
@@ -935,6 +897,7 @@
 
                 <div
                     class="product-image product-five"
+                    aria-hidden="true"
                 >
 
                     <span class="new-badge rabar">
@@ -963,6 +926,7 @@
                             type="button"
                             data-product="کەمەری پڕیمیۆم"
                             data-price="190"
+                            aria-label="Add کەمەری پڕیمیۆم to cart"
                         >
                             +
                         </button>
@@ -1021,6 +985,7 @@
             id="close-cart"
             class="close-button"
             type="button"
+            aria-label="Close cart"
         >
             ×
         </button>
@@ -1092,6 +1057,8 @@
 <div
     class="toast"
     id="toast"
+    role="status"
+    aria-live="polite"
 ></div>
 
 
@@ -1100,7 +1067,10 @@
      BOTTOM NAV
 ========================================= -->
 
-<nav class="bottom-navigation">
+<nav
+    class="bottom-navigation"
+    aria-label="Main navigation"
+>
 
 
     <a
@@ -1108,7 +1078,10 @@
         class="bottom-nav-item active"
     >
 
-        <span class="bottom-icon">
+        <span
+            class="bottom-icon"
+            aria-hidden="true"
+        >
             ⌂
         </span>
 
@@ -1124,7 +1097,10 @@
         class="bottom-nav-item"
     >
 
-        <span class="bottom-icon">
+        <span
+            class="bottom-icon"
+            aria-hidden="true"
+        >
             ⊞
         </span>
 
@@ -1140,7 +1116,10 @@
         class="bottom-nav-item"
     >
 
-        <span class="bottom-icon">
+        <span
+            class="bottom-icon"
+            aria-hidden="true"
+        >
             ♡
         </span>
 
@@ -1156,7 +1135,10 @@
         class="bottom-nav-item"
     >
 
-        <span class="bottom-icon">
+        <span
+            class="bottom-icon"
+            aria-hidden="true"
+        >
             ♙
         </span>
 
