@@ -32,23 +32,26 @@
     <style>
 
         /* =========================================
-           ONLY SPACING CHANGES
+           SPACING + POSITION FIXES
         ========================================= */
 
-        /* Move hero button slightly upward */
+        /* Keep the hero button centered and slightly higher */
         .hero-content {
             transform: translateY(-18px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
 
-        /* Categories directly under banner */
+        /* Categories directly under the banner */
         .categories-section {
             padding-top: 0 !important;
             padding-bottom: 0 !important;
         }
 
 
-        /* Empty categories heading removed */
+        /* Remove empty category heading space */
         .categories-section .section-heading {
             display: none;
         }
@@ -66,9 +69,18 @@
         }
 
 
-        /* Empty products heading removed */
+        /* Remove empty product heading space */
         .products-section .section-heading {
             min-height: 0 !important;
+        }
+
+
+        /* =========================================
+           WHOLE WEBSITE 90%
+        ========================================= */
+
+        html {
+            zoom: 90%;
         }
 
     </style>
