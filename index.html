@@ -1,482 +1,811 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090807">
-  <meta name="description" content="Trillionaire Collection — premium fashion, original brands, premium style.">
-  <title>Trillionaire Collection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Trillionaire Collection</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="announcement">
-    ORIGINAL BRANDS
-    <span>•</span>
-    PREMIUM STYLE
-    <span>•</span>
-    CELEBRITY LOOKS
-  </div>
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header class="header">
+<header class="header">
 
-    <a class="brand" href="#">
-      <span class="brand-mark">TC</span>
+    <div class="top-location">
 
-      <span>
-        <strong>TRILLIONAIRE</strong>
-        <small>COLLECTION</small>
-      </span>
-    </a>
+        <div class="location-icon">
+            📍
+        </div>
 
-    <nav>
-      <a href="#shop">Shop</a>
-      <a href="#brands">Brands</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+        <div>
+            <div class="kurdish">
+                به‌ختیاری - نزیک گۆڵان موڵ
+            </div>
 
-    <button class="menu" aria-label="Open menu">
-      ☰
-    </button>
-
-    <div class="header-actions">
-
-      <button aria-label="Search" id="searchBtn">
-        ⌕
-      </button>
-
-      <button aria-label="Shopping bag" id="bagBtn">
-        ♧
-        <span class="bag-count">0</span>
-      </button>
+            <div class="erbil">
+                ERBIL
+            </div>
+        </div>
 
     </div>
 
-  </header>
 
+    <div class="main-logo">
 
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <div class="hero-image"></div>
-
-      <div class="hero-shade"></div>
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          MORE THAN FASHION
+        <div class="logo-square">
+            TC
         </div>
 
-        <h1>
-          Trillionaire<br>
-          <em>Collection</em>
-        </h1>
-
-        <p>
-          Original brands. Premium style. Curated for those who expect more.
-        </p>
-
-        <a class="gold-btn" href="#shop">
-          Explore Collection
-          <span>→</span>
-        </a>
-
-        <div class="location">
-          ⌖
-
-          <span>
-            به‌ختیاری - نزیک گۆڵان موڵ
-          </span>
-
-          <small>
-            ERBIL
-          </small>
-
+        <div class="logo-name">
+            <div>TRILLIONAIRE</div>
+            <small>COLLECTION</small>
         </div>
 
-      </div>
+    </div>
+
+</header>
 
 
-      <div class="side-points">
+<!-- =========================
+     SEARCH / MENU / CART
+========================= -->
+
+<section class="toolbar">
+
+    <button
+        class="search-bar"
+        id="searchButton"
+        type="button"
+    >
+
+        <span class="search-icon">
+            🔍
+        </span>
+
+        <span class="search-text">
+            Search products...
+        </span>
+
+    </button>
+
+
+    <button
+        class="toolbar-button"
+        id="menuButton"
+        type="button"
+        aria-label="Menu"
+    >
+        ☰
+    </button>
+
+
+    <button
+        class="toolbar-button cart-button"
+        id="cartButton"
+        type="button"
+        aria-label="Shopping cart"
+    >
+
+        🛍
+
+        <span
+            class="cart-count"
+            id="cartCount"
+        >
+            0
+        </span>
+
+    </button>
+
+</section>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<div
+    class="menu-panel"
+    id="menuPanel"
+>
+
+    <a href="#products">
+        Products
+    </a>
+
+    <a href="#brands">
+        Brands
+    </a>
+
+    <a href="#about">
+        About
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</div>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<main>
+
+<section
+    class="products-section"
+    id="products"
+>
+
+    <div class="section-header">
 
         <div>
-          <b>01</b>
-          <span>
-            Original<br>
-            Brands
-          </span>
-        </div>
 
-        <div>
-          <b>02</b>
-          <span>
-            Premium<br>
-            Style
-          </span>
-        </div>
-
-        <div>
-          <b>03</b>
-          <span>
-            Celebrity<br>
-            Looks
-          </span>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="intro" id="about">
-
-      <p class="eyebrow">
-        THE TRILLIONAIRE STANDARD
-      </p>
-
-      <h2>
-        Luxury, without compromise.
-      </h2>
-
-      <p class="lead">
-        Discover a carefully selected collection of fashion,
-        footwear and accessories from the world's most recognized names.
-      </p>
-
-    </section>
-
-
-    <!-- SHOP -->
-
-    <section class="shop" id="shop">
-
-      <div class="section-head">
-
-        <div>
-
-          <p class="eyebrow">
-            CURATED FOR YOU
-          </p>
-
-          <h2>
-            Featured Collection
-          </h2>
-
-        </div>
-
-        <a href="#" class="text-link">
-          View all
-          <span>→</span>
-        </a>
-
-      </div>
-
-
-      <div class="products">
-
-        <article class="product">
-
-          <div class="product-img img-one">
-            <span>NEW</span>
-          </div>
-
-          <div class="product-info">
-
-            <div>
-              <h3>
-                Signature Street Tee
-              </h3>
-
-              <p>
-                Premium cotton
-              </p>
+            <div class="gold-label">
+                TRILLIONAIRE COLLECTION
             </div>
 
-            <strong>
-              $120
-            </strong>
+            <h1>
+                Featured Products
+            </h1>
 
-          </div>
+        </div>
+
+
+        <button
+            class="filter-button"
+            id="filterButton"
+            type="button"
+        >
+            FILTER
+            <span>⌄</span>
+        </button>
+
+    </div>
+
+
+    <div
+        class="filter-menu"
+        id="filterMenu"
+    >
+
+        <button data-filter="all">
+            ALL
+        </button>
+
+        <button data-filter="new">
+            NEW
+        </button>
+
+        <button data-filter="limited">
+            LIMITED
+        </button>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="product-card"
+            data-type="new"
+        >
+
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
+
+
+            <div class="product-image product-one">
+
+                <span class="product-tag">
+                    NEW
+                </span>
+
+                <div class="hoodie">
+                    <div class="hoodie-logo">
+                        TT
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div>
+
+                    <h2>
+                        Trillionaire Hoodie
+                    </h2>
+
+                    <p>
+                        Premium Cotton
+                    </p>
+
+                </div>
+
+                <strong>
+                    $120
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
 
         </article>
 
 
-        <article class="product">
 
-          <div class="product-img img-two">
-            <span>EDIT</span>
-          </div>
+        <!-- PRODUCT 2 -->
 
-          <div class="product-info">
+        <article
+            class="product-card"
+            data-type="new"
+        >
 
-            <div>
-              <h3>
-                Monogram Overshirt
-              </h3>
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
 
-              <p>
-                Luxury casual
-              </p>
+
+            <div class="product-image product-two">
+
+                <span class="product-tag">
+                    NEW
+                </span>
+
+                <div class="tshirt">
+
+                    <div class="tshirt-logo">
+                        TRILLIONAIRE
+                        <small>COLLECTION</small>
+                    </div>
+
+                </div>
+
             </div>
 
-            <strong>
-              $290
-            </strong>
 
-          </div>
+            <div class="product-info">
+
+                <div>
+
+                    <h2>
+                        Classic T-Shirt
+                    </h2>
+
+                    <p>
+                        Luxury Fit
+                    </p>
+
+                </div>
+
+                <strong>
+                    $90
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
 
         </article>
 
 
-        <article class="product">
 
-          <div class="product-img img-three">
-            <span>ICON</span>
-          </div>
+        <!-- PRODUCT 3 -->
 
-          <div class="product-info">
+        <article
+            class="product-card"
+            data-type="limited"
+        >
 
-            <div>
-              <h3>
-                Classic Runner
-              </h3>
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
 
-              <p>
-                Statement footwear
-              </p>
+
+            <div class="product-image product-three">
+
+                <span class="product-tag">
+                    LIMITED
+                </span>
+
+                <div class="puffer">
+
+                    <div class="puffer-logo">
+                        TT
+                    </div>
+
+                </div>
+
             </div>
 
-            <strong>
-              $210
-            </strong>
 
-          </div>
+            <div class="product-info">
+
+                <div>
+
+                    <h2>
+                        Puffer Jacket
+                    </h2>
+
+                    <p>
+                        Winter Collection
+                    </p>
+
+                </div>
+
+                <strong>
+                    $250
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
 
         </article>
 
 
-        <article class="product">
 
-          <div class="product-img img-four">
-            <span>LIMITED</span>
-          </div>
+        <!-- PRODUCT 4 -->
 
-          <div class="product-info">
+        <article
+            class="product-card"
+            data-type="limited"
+        >
 
-            <div>
-              <h3>
-                Executive Polo
-              </h3>
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
 
-              <p>
-                Refined essentials
-              </p>
+
+            <div class="product-image product-four">
+
+                <span class="product-tag">
+                    LIMITED
+                </span>
+
+                <div class="sneaker">
+
+                    <div class="sneaker-logo">
+                        TT
+                    </div>
+
+                </div>
+
             </div>
 
-            <strong>
-              $180
-            </strong>
 
-          </div>
+            <div class="product-info">
+
+                <div>
+
+                    <h2>
+                        Trillionaire Sneakers
+                    </h2>
+
+                    <p>
+                        Limited Edition
+                    </p>
+
+                </div>
+
+                <strong>
+                    $180
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
 
         </article>
 
-      </div>
-
-    </section>
 
 
-    <!-- BRANDS -->
+        <!-- PRODUCT 5 -->
 
-    <section class="brands" id="brands">
+        <article
+            class="product-card"
+            data-type="all"
+        >
 
-      <p class="eyebrow">
-        OUR EDIT
-      </p>
-
-      <h2>
-        Recognized names.<br>
-        <em>One destination.</em>
-      </h2>
-
-      <div class="brand-list">
-
-        <span>LOUIS VUITTON</span>
-        <span>GUCCI</span>
-        <span>BALENCIAGA</span>
-        <span>NIKE</span>
-        <span>adidas</span>
-        <span>PRADA</span>
-        <span>OFF-WHITE™</span>
-
-      </div>
-
-    </section>
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
 
 
-    <!-- STORE -->
+            <div class="product-image product-five">
 
-    <section class="experience">
+                <span class="product-tag">
+                    ICON
+                </span>
 
-      <div class="experience-copy">
+                <div class="cap">
 
-        <p class="eyebrow">
-          VISIT US
-        </p>
+                    <div class="cap-logo">
+                        TT
+                    </div>
 
-        <h2>
-          More than a store.<br>
-          <em>A lifestyle.</em>
-        </h2>
+                </div>
 
-        <p>
-          Step into our Erbil collection and experience premium fashion
-          in an atmosphere built around detail, confidence and individuality.
-        </p>
-
-        <a class="outline-btn" href="#contact">
-          Get directions
-        </a>
-
-      </div>
-
-      <div class="experience-photo"></div>
-
-    </section>
+            </div>
 
 
-    <!-- CONTACT -->
+            <div class="product-info">
 
-    <section class="contact" id="contact">
+                <div>
 
-      <p class="eyebrow">
+                    <h2>
+                        Classic Cap
+                    </h2>
+
+                    <p>
+                        Adjustable Fit
+                    </p>
+
+                </div>
+
+                <strong>
+                    $60
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
+
+        </article>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+            class="product-card"
+            data-type="all"
+        >
+
+            <button
+                class="favorite"
+                type="button"
+            >
+                ♡
+            </button>
+
+
+            <div class="product-image product-six">
+
+                <span class="product-tag">
+                    ESSENTIAL
+                </span>
+
+                <div class="pants">
+
+                    <div class="pants-logo">
+                        TT
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div>
+
+                    <h2>
+                        Essential Sweatpants
+                    </h2>
+
+                    <p>
+                        Comfort Fit
+                    </p>
+
+                </div>
+
+                <strong>
+                    $100
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart"
+                type="button"
+            >
+                ADD TO BAG
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="gold-label">
+        MORE THAN FASHION
+    </div>
+
+    <h2>
+        A lifestyle.
+    </h2>
+
+    <p>
+        Original brands. Premium style.
+        Curated for those who expect more.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     BRANDS
+========================= -->
+
+<section
+    class="brands"
+    id="brands"
+>
+
+    <div class="gold-label">
+        OUR BRANDS
+    </div>
+
+    <h2>
+        Recognized names.
+    </h2>
+
+    <div class="brand-list">
+
+        <span>
+            LOUIS VUITTON
+        </span>
+
+        <span>
+            GUCCI
+        </span>
+
+        <span>
+            BALENCIAGA
+        </span>
+
+        <span>
+            NIKE
+        </span>
+
+        <span>
+            ADIDAS
+        </span>
+
+        <span>
+            PRADA
+        </span>
+
+        <span>
+            OFF-WHITE™
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <div class="gold-label">
         CONNECT WITH US
-      </p>
+    </div>
 
-      <h2>
+    <h2>
         Stay in the collection.
-      </h2>
+    </h2>
 
-      <form
-        onsubmit="event.preventDefault(); this.reset(); document.querySelector('.form-note').textContent='Thank you — you are on the list.';"
-      >
+
+    <form id="newsletter">
 
         <input
-          type="email"
-          placeholder="Your email address"
-          required
+            type="email"
+            placeholder="Your email address"
+            required
         >
 
         <button type="submit">
-          Join
-          <span>→</span>
+            JOIN →
         </button>
 
-      </form>
-
-      <p class="form-note"></p>
-
-    </section>
-
-  </main>
+    </form>
 
 
-  <!-- FOOTER -->
+    <p id="formMessage"></p>
 
-  <footer>
+</section>
 
-    <div class="footer-brand">
+</main>
 
-      <span class="brand-mark">
-        TC
-      </span>
 
-      <div>
-        <strong>
-          TRILLIONAIRE
-        </strong>
 
-        <small>
-          COLLECTION
-        </small>
-      </div>
+<!-- =========================
+     SEARCH OVERLAY
+========================= -->
+
+<div
+    class="search-overlay"
+    id="searchOverlay"
+>
+
+    <button
+        class="close-search"
+        id="closeSearch"
+        type="button"
+    >
+        ×
+    </button>
+
+
+    <div class="search-container">
+
+        <div class="gold-label">
+            SEARCH COLLECTION
+        </div>
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search products..."
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <div class="logo-square">
+            TC
+        </div>
+
+        <div>
+
+            <strong>
+                TRILLIONAIRE
+            </strong>
+
+            <small>
+                COLLECTION
+            </small>
+
+        </div>
 
     </div>
 
 
     <div class="footer-location">
 
-      ⌖ به‌ختیاری - نزیک گۆڵان موڵ
+        📍 به‌ختیاری - نزیک گۆڵان موڵ
 
-      <br>
+        <br>
 
-      <small>
-        ERBIL, KURDISTAN
-      </small>
+        <small>
+            ERBIL, KURDISTAN
+        </small>
 
     </div>
 
 
     <div class="socials">
 
-      <a href="#">
-        Instagram
-      </a>
+        INSTAGRAM
 
-      <a href="#">
-        TikTok
-      </a>
+        <span>•</span>
+
+        TIKTOK
 
     </div>
 
 
-    <p class="copyright">
-      © 2026 Trillionaire Collection. All rights reserved.
-    </p>
+    <div class="copyright">
 
-  </footer>
-
-
-  <!-- SEARCH -->
-
-  <div class="search-panel" id="searchPanel">
-
-    <button class="close" id="closeSearch">
-      ×
-    </button>
-
-    <div>
-
-      <p class="eyebrow">
-        SEARCH COLLECTION
-      </p>
-
-      <input
-        id="searchInput"
-        autofocus
-        placeholder="Search products, brands..."
-      >
+        © 2026 Trillionaire Collection
 
     </div>
 
-  </div>
+</footer>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
