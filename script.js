@@ -1,37 +1,37 @@
 "use strict";
 
 
-/* =========================================
-   PAGE LOADER
-========================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* =========================================
+       LOADER
+    ========================================= */
 
     const loader =
         document.getElementById("page-loader");
 
+
     setTimeout(() => {
 
-        if (loader) {
-            loader.classList.add("hidden");
-        }
+        loader?.classList.add("hidden");
 
     }, 500);
 
 
 
-    /* =====================================
-       GLOBAL
-    ===================================== */
+    /* =========================================
+       BODY
+    ========================================= */
 
     const body =
         document.body;
 
 
 
-    /* =====================================
-       MOBILE MENU
-    ===================================== */
+    /* =========================================
+       MENU
+    ========================================= */
 
     const menuButton =
         document.getElementById("menu-button");
@@ -68,19 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    menuButton.addEventListener(
+    menuButton?.addEventListener(
         "click",
         openMenu
     );
 
 
-    closeMenu.addEventListener(
+    closeMenu?.addEventListener(
         "click",
         closeMenuPanel
     );
 
 
-    menuOverlay.addEventListener(
+    menuOverlay?.addEventListener(
         "click",
         closeMenuPanel
     );
@@ -99,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        SEARCH
-    ===================================== */
+    ========================================= */
 
     const searchButton =
         document.getElementById("search-button");
@@ -137,6 +137,18 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "کەمیزی لۆی ڤیتۆن",
             category: "پیاوان",
             price: "$620"
+        },
+
+        {
+            name: "جاکەتی پڕیمیۆم",
+            category: "جاکەت",
+            price: "$580"
+        },
+
+        {
+            name: "کەمەری پڕیمیۆم",
+            category: "کەمەر",
+            price: "$190"
         }
 
     ];
@@ -170,19 +182,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    searchButton.addEventListener(
+    searchButton?.addEventListener(
         "click",
         openSearch
     );
 
 
-    searchClose.addEventListener(
+    searchClose?.addEventListener(
         "click",
         closeSearch
     );
 
 
-    searchInput.addEventListener(
+    searchInput?.addEventListener(
         "input",
         () => {
 
@@ -220,9 +232,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!found.length) {
 
                 searchResults.innerHTML = `
+
                     <div class="search-result rabar">
+
                         هیچ بەرهەمێک نەدۆزرایەوە
+
                     </div>
+
                 `;
 
                 return;
@@ -238,13 +254,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="search-result">
 
                             <strong class="rabar">
+
                                 ${product.name}
+
                             </strong>
 
                             <br>
 
                             ${product.category}
+
                             ·
+
                             ${product.price}
 
                         </div>
@@ -258,9 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        CART
-    ===================================== */
+    ========================================= */
 
     const cartButton =
         document.getElementById("cart-button");
@@ -312,45 +332,52 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    cartButton.addEventListener(
+    cartButton?.addEventListener(
         "click",
         openCart
     );
 
 
-    closeCart.addEventListener(
+    closeCart?.addEventListener(
         "click",
         closeCartPanel
     );
 
 
-    cartOverlay.addEventListener(
+    cartOverlay?.addEventListener(
         "click",
         closeCartPanel
     );
 
 
 
-    /* =====================================
+    /* =========================================
        RENDER CART
-    ===================================== */
+    ========================================= */
 
     function renderCart() {
 
         const count =
             cart.reduce(
-                (total, item) =>
-                    total + item.quantity,
+                (total, item) => {
+
+                    return total +
+                        item.quantity;
+
+                },
                 0
             );
 
 
         const total =
             cart.reduce(
-                (sum, item) =>
-                    sum +
-                    Number(item.price) *
-                    item.quantity,
+                (sum, item) => {
+
+                    return sum +
+                        Number(item.price) *
+                        item.quantity;
+
+                },
                 0
             );
 
@@ -387,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         cartItems.innerHTML =
-            cart.map((item, index) => {
+            cart.map((item,index) => {
 
                 return `
 
@@ -395,16 +422,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <div class="cart-item-image"></div>
 
+
                         <div class="cart-item-info">
 
                             <div class="cart-item-name rabar">
+
                                 ${item.name}
+
                             </div>
+
 
                             <div class="cart-item-price">
 
                                 $${item.price}
+
                                 ×
+
                                 ${item.quantity}
 
                             </div>
@@ -417,7 +450,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             type="button"
                             data-index="${index}"
                         >
+
                             ×
+
                         </button>
 
                     </div>
@@ -458,9 +493,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        ADD TO CART
-    ===================================== */
+    ========================================= */
 
     document
         .querySelectorAll(".add-cart")
@@ -472,6 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const name =
                         button.dataset.product;
+
 
                     const price =
                         button.dataset.price;
@@ -488,7 +524,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         existing.quantity++;
 
-                    } else {
+                    }
+
+                    else {
 
                         cart.push({
 
@@ -505,6 +543,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     renderCart();
 
+
                     showToast(
                         "بەرهەمەکە زیادکرا بۆ سەبەتەکەت"
                     );
@@ -516,9 +555,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        WISHLIST
-    ===================================== */
+    ========================================= */
 
     document
         .querySelectorAll(".wishlist-button")
@@ -542,11 +581,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         button.textContent =
                             "♥";
 
+
                         showToast(
                             "زیادکرا بۆ دڵخوازەکان"
                         );
 
-                    } else {
+                    }
+
+                    else {
 
                         button.textContent =
                             "♡";
@@ -560,9 +602,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        TOAST
-    ===================================== */
+    ========================================= */
 
     const toast =
         document.getElementById("toast");
@@ -572,6 +614,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function showToast(message) {
+
+        if (!toast) return;
+
 
         toast.textContent =
             message;
@@ -588,23 +633,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         toastTimer =
-            setTimeout(() => {
+            setTimeout(
+                () => {
 
-                toast.classList.remove(
-                    "show"
-                );
+                    toast.classList.remove(
+                        "show"
+                    );
 
-            }, 2200);
+                },
+                2200
+            );
 
     }
 
 
 
-    /* =====================================
+    /* =========================================
        CHECKOUT
-    ===================================== */
+    ========================================= */
 
-    checkoutButton.addEventListener(
+    checkoutButton?.addEventListener(
         "click",
         () => {
 
@@ -628,9 +676,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
-       BOTTOM NAVIGATION
-    ===================================== */
+    /* =========================================
+       BOTTOM NAV
+    ========================================= */
 
     document
         .querySelectorAll(".bottom-nav-item")
@@ -664,9 +712,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        ESC KEY
-    ===================================== */
+    ========================================= */
 
     document.addEventListener(
         "keydown",
@@ -675,7 +723,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (
                 event.key !== "Escape"
             ) {
+
                 return;
+
             }
 
 
@@ -690,9 +740,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================
+    /* =========================================
        INITIAL CART
-    ===================================== */
+    ========================================= */
 
     renderCart();
 
