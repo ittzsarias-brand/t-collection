@@ -2224,3 +2224,51 @@ svg {
     }
 
 }
+
+
+
+/* =========================================
+   HERO BUTTON CENTER FIX
+========================================= */
+
+.hero-content {
+
+    left: 50% !important;
+
+    right: auto !important;
+
+    width: 100% !important;
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    text-align: center !important;
+
+    transform:
+        translateX(-50%) !important;
+
+}
+
+
+.hero-content .primary-button {
+
+    position: relative !important;
+
+    left: auto !important;
+
+    right: auto !important;
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+    transform: none !important;
+
+}
