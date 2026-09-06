@@ -1,7 +1,10 @@
 "use strict";
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
 
 
     /* =========================================
@@ -9,14 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     const loader =
-        document.getElementById("page-loader");
+        document.getElementById(
+            "page-loader"
+        );
 
 
-    setTimeout(() => {
+    setTimeout(
+        () => {
 
-        loader?.classList.add("hidden");
+            loader?.classList.add(
+                "hidden"
+            );
 
-    }, 500);
+        },
+        500
+    );
 
 
 
@@ -34,38 +44,64 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     const menuButton =
-        document.getElementById("menu-button");
+        document.getElementById(
+            "menu-button"
+        );
+
 
     const closeMenu =
-        document.getElementById("close-menu");
+        document.getElementById(
+            "close-menu"
+        );
+
 
     const mobileMenu =
-        document.getElementById("mobile-menu");
+        document.getElementById(
+            "mobile-menu"
+        );
+
 
     const menuOverlay =
-        document.getElementById("menu-overlay");
+        document.getElementById(
+            "menu-overlay"
+        );
+
 
 
     function openMenu() {
 
-        mobileMenu.classList.add("open");
+        mobileMenu.classList.add(
+            "open"
+        );
 
-        menuOverlay.classList.add("open");
+        menuOverlay.classList.add(
+            "open"
+        );
 
-        body.classList.add("no-scroll");
+        body.classList.add(
+            "no-scroll"
+        );
 
     }
+
 
 
     function closeMenuPanel() {
 
-        mobileMenu.classList.remove("open");
+        mobileMenu.classList.remove(
+            "open"
+        );
 
-        menuOverlay.classList.remove("open");
+        menuOverlay.classList.remove(
+            "open"
+        );
 
-        body.classList.remove("no-scroll");
+        body.classList.remove(
+            "no-scroll"
+        );
 
     }
+
 
 
     menuButton?.addEventListener(
@@ -86,16 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
+
     document
-        .querySelectorAll(".mobile-navigation a")
-        .forEach(link => {
+        .querySelectorAll(
+            ".mobile-navigation a"
+        )
+        .forEach(
+            link => {
 
-            link.addEventListener(
-                "click",
-                closeMenuPanel
-            );
+                link.addEventListener(
+                    "click",
+                    closeMenuPanel
+                );
 
-        });
+            }
+        );
 
 
 
@@ -104,82 +145,152 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     const searchButton =
-        document.getElementById("search-button");
+        document.getElementById(
+            "search-button"
+        );
+
 
     const searchPanel =
-        document.getElementById("search-panel");
+        document.getElementById(
+            "search-panel"
+        );
+
 
     const searchClose =
-        document.getElementById("search-close");
+        document.getElementById(
+            "search-close"
+        );
+
 
     const searchInput =
-        document.getElementById("search-input");
+        document.getElementById(
+            "search-input"
+        );
+
 
     const searchResults =
-        document.getElementById("search-results");
+        document.getElementById(
+            "search-results"
+        );
+
 
 
     const products = [
 
         {
-            name: "تی شێرت بالەنسیگا",
-            category: "پیاوان",
-            price: "$450"
+            name:
+                "تی شێرت بالەنسیگا",
+
+            category:
+                "پیاوان",
+
+            price:
+                "$450"
+
         },
 
         {
-            name: "نایک ایر فورس",
-            category: "پێڵاو",
-            price: "$120"
+            name:
+                "نایک ایر فورس",
+
+            category:
+                "پێڵاو",
+
+            price:
+                "$120"
+
         },
 
         {
-            name: "کەمیزی لۆی ڤیتۆن",
-            category: "پیاوان",
-            price: "$620"
+            name:
+                "کەمیزی لۆی ڤیتۆن",
+
+            category:
+                "پیاوان",
+
+            price:
+                "$620"
+
         },
 
         {
-            name: "جاکەتی پڕیمیۆم",
-            category: "جاکەت",
-            price: "$580"
+            name:
+                "جاکەتی پڕیمیۆم",
+
+            category:
+                "جاکەت",
+
+            price:
+                "$580"
+
         },
 
         {
-            name: "کەمەری پڕیمیۆم",
-            category: "کەمەر",
-            price: "$190"
+            name:
+                "کەمەری پڕیمیۆم",
+
+            category:
+                "کەمەر",
+
+            price:
+                "$190"
+
         }
 
     ];
 
 
+
     function openSearch() {
 
-        searchPanel.classList.add("open");
+        searchPanel.classList.add(
+            "open"
+        );
 
-        body.classList.add("no-scroll");
+        body.classList.add(
+            "no-scroll"
+        );
 
-        setTimeout(() => {
 
-            searchInput.focus();
+        setTimeout(
+            () => {
 
-        }, 150);
+                searchInput?.focus();
+
+            },
+            150
+        );
 
     }
+
 
 
     function closeSearch() {
 
-        searchPanel.classList.remove("open");
+        searchPanel.classList.remove(
+            "open"
+        );
 
-        body.classList.remove("no-scroll");
+        body.classList.remove(
+            "no-scroll"
+        );
 
-        searchInput.value = "";
 
-        searchResults.innerHTML = "";
+        if (searchInput) {
+
+            searchInput.value = "";
+
+        }
+
+
+        if (searchResults) {
+
+            searchResults.innerHTML = "";
+
+        }
 
     }
+
 
 
     searchButton?.addEventListener(
@@ -194,9 +305,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
+
     searchInput?.addEventListener(
         "input",
         () => {
+
 
             const query =
                 searchInput.value
@@ -206,7 +319,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!query) {
 
-                searchResults.innerHTML = "";
+                searchResults.innerHTML =
+                    "";
 
                 return;
 
@@ -214,26 +328,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const found =
-                products.filter(product => {
+                products.filter(
+                    product => {
 
-                    return (
-                        product.name
-                            .toLowerCase()
-                            .includes(query)
-                        ||
-                        product.category
-                            .toLowerCase()
-                            .includes(query)
-                    );
+                        return (
 
-                });
+                            product.name
+                                .toLowerCase()
+                                .includes(
+                                    query
+                                )
+
+                            ||
+
+                            product.category
+                                .toLowerCase()
+                                .includes(
+                                    query
+                                )
+
+                        );
+
+                    }
+                );
+
 
 
             if (!found.length) {
 
                 searchResults.innerHTML = `
 
-                    <div class="search-result rabar">
+                    <div
+                        class="search-result rabar"
+                    >
 
                         هیچ بەرهەمێک نەدۆزرایەوە
 
@@ -246,32 +373,41 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
+
             searchResults.innerHTML =
-                found.map(product => {
+                found
+                    .map(
+                        product => {
 
-                    return `
+                            return `
 
-                        <div class="search-result">
+                                <div
+                                    class="search-result"
+                                >
 
-                            <strong class="rabar">
+                                    <strong
+                                        class="rabar"
+                                    >
 
-                                ${product.name}
+                                        ${product.name}
 
-                            </strong>
+                                    </strong>
 
-                            <br>
+                                    <br>
 
-                            ${product.category}
+                                    ${product.category}
 
-                            ·
+                                    ·
 
-                            ${product.price}
+                                    ${product.price}
 
-                        </div>
+                                </div>
 
-                    `;
+                            `;
 
-                }).join("");
+                        }
+                    )
+                    .join("");
 
         }
     );
@@ -283,53 +419,92 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     const cartButton =
-        document.getElementById("cart-button");
+        document.getElementById(
+            "cart-button"
+        );
+
 
     const cartDrawer =
-        document.getElementById("cart-drawer");
+        document.getElementById(
+            "cart-drawer"
+        );
+
 
     const cartOverlay =
-        document.getElementById("cart-overlay");
+        document.getElementById(
+            "cart-overlay"
+        );
+
 
     const closeCart =
-        document.getElementById("close-cart");
+        document.getElementById(
+            "close-cart"
+        );
+
 
     const cartCount =
-        document.getElementById("cart-count");
+        document.getElementById(
+            "cart-count"
+        );
+
 
     const cartItems =
-        document.getElementById("cart-items");
+        document.getElementById(
+            "cart-items"
+        );
+
 
     const cartTotal =
-        document.getElementById("cart-total");
+        document.getElementById(
+            "cart-total"
+        );
+
 
     const checkoutButton =
-        document.getElementById("checkout-button");
+        document.getElementById(
+            "checkout-button"
+        );
+
 
 
     let cart = [];
 
 
+
     function openCart() {
 
-        cartDrawer.classList.add("open");
+        cartDrawer.classList.add(
+            "open"
+        );
 
-        cartOverlay.classList.add("open");
+        cartOverlay.classList.add(
+            "open"
+        );
 
-        body.classList.add("no-scroll");
+        body.classList.add(
+            "no-scroll"
+        );
 
     }
+
 
 
     function closeCartPanel() {
 
-        cartDrawer.classList.remove("open");
+        cartDrawer.classList.remove(
+            "open"
+        );
 
-        cartOverlay.classList.remove("open");
+        cartOverlay.classList.remove(
+            "open"
+        );
 
-        body.classList.remove("no-scroll");
+        body.classList.remove(
+            "no-scroll"
+        );
 
     }
+
 
 
     cartButton?.addEventListener(
@@ -357,12 +532,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderCart() {
 
+
         const count =
             cart.reduce(
-                (total, item) => {
+                (
+                    total,
+                    item
+                ) => {
 
-                    return total +
-                        item.quantity;
+                    return (
+                        total +
+                        item.quantity
+                    );
 
                 },
                 0
@@ -371,15 +552,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const total =
             cart.reduce(
-                (sum, item) => {
+                (
+                    sum,
+                    item
+                ) => {
 
-                    return sum +
-                        Number(item.price) *
-                        item.quantity;
+                    return (
+                        sum +
+                        Number(
+                            item.price
+                        ) *
+                        item.quantity
+                    );
 
                 },
                 0
             );
+
 
 
         cartCount.textContent =
@@ -388,6 +577,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cartTotal.textContent =
             `$${total}`;
+
 
 
         if (!cart.length) {
@@ -413,81 +603,103 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+
         cartItems.innerHTML =
-            cart.map((item,index) => {
+            cart
+                .map(
+                    (
+                        item,
+                        index
+                    ) => {
 
-                return `
+                        return `
 
-                    <div class="cart-item">
+                            <div class="cart-item">
 
-                        <div class="cart-item-image"></div>
+                                <div
+                                    class="cart-item-image"
+                                ></div>
 
 
-                        <div class="cart-item-info">
+                                <div
+                                    class="cart-item-info"
+                                >
 
-                            <div class="cart-item-name rabar">
+                                    <div
+                                        class="cart-item-name rabar"
+                                    >
 
-                                ${item.name}
+                                        ${item.name}
+
+                                    </div>
+
+
+                                    <div
+                                        class="cart-item-price"
+                                    >
+
+                                        $${item.price}
+
+                                        ×
+
+                                        ${item.quantity}
+
+                                    </div>
+
+                                </div>
+
+
+                                <button
+                                    class="remove-item"
+                                    type="button"
+                                    data-index="${index}"
+                                >
+
+                                    ×
+
+                                </button>
 
                             </div>
 
+                        `;
 
-                            <div class="cart-item-price">
+                    }
+                )
+                .join("");
 
-                                $${item.price}
-
-                                ×
-
-                                ${item.quantity}
-
-                            </div>
-
-                        </div>
-
-
-                        <button
-                            class="remove-item"
-                            type="button"
-                            data-index="${index}"
-                        >
-
-                            ×
-
-                        </button>
-
-                    </div>
-
-                `;
-
-            }).join("");
 
 
         document
-            .querySelectorAll(".remove-item")
-            .forEach(button => {
+            .querySelectorAll(
+                ".remove-item"
+            )
+            .forEach(
+                button => {
 
-                button.addEventListener(
-                    "click",
-                    () => {
+                    button.addEventListener(
+                        "click",
+                        () => {
 
-                        const index =
-                            Number(
-                                button.dataset.index
+                            const index =
+                                Number(
+                                    button.dataset
+                                        .index
+                                );
+
+
+                            cart.splice(
+                                index,
+                                1
                             );
 
 
-                        cart.splice(
-                            index,
-                            1
-                        );
+                            renderCart();
 
+                        }
+                    );
 
-                        renderCart();
-
-                    }
-                );
-
-            });
+                }
+            );
 
     }
 
@@ -498,60 +710,73 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     document
-        .querySelectorAll(".add-cart")
-        .forEach(button => {
+        .querySelectorAll(
+            ".add-cart"
+        )
+        .forEach(
+            button => {
 
-            button.addEventListener(
-                "click",
-                () => {
-
-                    const name =
-                        button.dataset.product;
-
-
-                    const price =
-                        button.dataset.price;
+                button.addEventListener(
+                    "click",
+                    () => {
 
 
-                    const existing =
-                        cart.find(
-                            item =>
-                                item.name === name
+                        const name =
+                            button.dataset
+                                .product;
+
+
+                        const price =
+                            button.dataset
+                                .price;
+
+
+                        const existing =
+                            cart.find(
+                                item =>
+                                    item.name ===
+                                    name
+                            );
+
+
+
+                        if (existing) {
+
+                            existing.quantity++;
+
+                        }
+
+                        else {
+
+                            cart.push({
+
+                                name:
+                                    name,
+
+                                price:
+                                    price,
+
+                                quantity:
+                                    1
+
+                            });
+
+                        }
+
+
+
+                        renderCart();
+
+
+                        showToast(
+                            "بەرهەمەکە زیادکرا بۆ سەبەتەکەت"
                         );
 
-
-                    if (existing) {
-
-                        existing.quantity++;
-
                     }
+                );
 
-                    else {
-
-                        cart.push({
-
-                            name: name,
-
-                            price: price,
-
-                            quantity: 1
-
-                        });
-
-                    }
-
-
-                    renderCart();
-
-
-                    showToast(
-                        "بەرهەمەکە زیادکرا بۆ سەبەتەکەت"
-                    );
-
-                }
-            );
-
-        });
+            }
+        );
 
 
 
@@ -560,45 +785,51 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     document
-        .querySelectorAll(".wishlist-button")
-        .forEach(button => {
+        .querySelectorAll(
+            ".wishlist-button"
+        )
+        .forEach(
+            button => {
 
-            button.addEventListener(
-                "click",
-                () => {
-
-                    button.classList.toggle(
-                        "liked"
-                    );
+                button.addEventListener(
+                    "click",
+                    () => {
 
 
-                    if (
-                        button.classList.contains(
+                        button.classList.toggle(
                             "liked"
-                        )
-                    ) {
-
-                        button.textContent =
-                            "♥";
-
-
-                        showToast(
-                            "زیادکرا بۆ دڵخوازەکان"
                         );
 
+
+
+                        if (
+                            button.classList.contains(
+                                "liked"
+                            )
+                        ) {
+
+                            button.textContent =
+                                "♥";
+
+
+                            showToast(
+                                "زیادکرا بۆ دڵخوازەکان"
+                            );
+
+                        }
+
+                        else {
+
+                            button.textContent =
+                                "♡";
+
+                        }
+
                     }
+                );
 
-                    else {
-
-                        button.textContent =
-                            "♡";
-
-                    }
-
-                }
-            );
-
-        });
+            }
+        );
 
 
 
@@ -607,15 +838,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     const toast =
-        document.getElementById("toast");
+        document.getElementById(
+            "toast"
+        );
 
 
     let toastTimer;
 
 
+
     function showToast(message) {
 
-        if (!toast) return;
+
+        if (!toast) {
+
+            return;
+
+        }
 
 
         toast.textContent =
@@ -656,6 +895,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "click",
         () => {
 
+
             if (!cart.length) {
 
                 showToast(
@@ -681,47 +921,56 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     document
-        .querySelectorAll(".bottom-nav-item")
-        .forEach(item => {
+        .querySelectorAll(
+            ".bottom-nav-item"
+        )
+        .forEach(
+            item => {
 
-            item.addEventListener(
-                "click",
-                () => {
+                item.addEventListener(
+                    "click",
+                    () => {
 
-                    document
-                        .querySelectorAll(
-                            ".bottom-nav-item"
-                        )
-                        .forEach(nav => {
 
-                            nav.classList.remove(
-                                "active"
+                        document
+                            .querySelectorAll(
+                                ".bottom-nav-item"
+                            )
+                            .forEach(
+                                nav => {
+
+                                    nav.classList.remove(
+                                        "active"
+                                    );
+
+                                }
                             );
 
-                        });
 
+                        item.classList.add(
+                            "active"
+                        );
 
-                    item.classList.add(
-                        "active"
-                    );
+                    }
+                );
 
-                }
-            );
-
-        });
+            }
+        );
 
 
 
     /* =========================================
-       ESC KEY
+       ESCAPE KEY
     ========================================= */
 
     document.addEventListener(
         "keydown",
         event => {
 
+
             if (
-                event.key !== "Escape"
+                event.key !==
+                "Escape"
             ) {
 
                 return;
@@ -745,5 +994,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     renderCart();
+
 
 });
