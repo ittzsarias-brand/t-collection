@@ -1,27 +1,38 @@
 @font-face {
+
     font-family: "Rabar";
-    src: url("Rabar_037.ttf") format("truetype");
+
+    src:
+        url("Rabar_037.ttf")
+        format("truetype");
+
     font-weight: 700;
+
     font-style: normal;
+
     font-display: swap;
+
 }
 
 
 :root {
 
     --black: #080706;
+
     --black-soft: #100e0b;
 
     --cream: #f7e8c9;
 
     --gold: #d9ad69;
+
     --gold-light: #f3d49d;
 
     --white: #f7f5ef;
 
     --muted: #aaa39a;
 
-    --line: rgba(218,175,108,.28);
+    --line:
+        rgba(218,175,108,.28);
 
 }
 
@@ -41,7 +52,8 @@ html {
 
     scroll-behavior: smooth;
 
-    background: var(--black);
+    background:
+        var(--black);
 
 }
 
@@ -56,7 +68,8 @@ body {
         ),
         var(--black);
 
-    color: var(--white);
+    color:
+        var(--white);
 
     font-family:
         Arial,
@@ -69,7 +82,9 @@ body {
 
 
 body.no-scroll {
+
     overflow: hidden;
+
 }
 
 
@@ -125,6 +140,7 @@ svg {
 }
 
 
+
 /* =========================================
    LOADER
 ========================================= */
@@ -137,7 +153,8 @@ svg {
 
     z-index: 9999;
 
-    background: #080706;
+    background:
+        #080706;
 
     display: grid;
 
@@ -174,15 +191,20 @@ svg {
 
     margin: auto;
 
-    border: 2px solid var(--gold-light);
+    border:
+        2px solid
+        var(--gold-light);
 
     display: grid;
 
     place-items: center;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
-    font-family: Georgia, serif;
+    font-family:
+        Georgia,
+        serif;
 
     font-size: 23px;
 
@@ -195,9 +217,12 @@ svg {
 
     margin-top: 13px;
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
-    font-family: Georgia, serif;
+    font-family:
+        Georgia,
+        serif;
 
     font-size: 18px;
 
@@ -210,9 +235,12 @@ svg {
 
     margin-top: 5px;
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
-    font-family: Georgia, serif;
+    font-family:
+        Georgia,
+        serif;
 
     font-size: 9px;
 
@@ -221,9 +249,9 @@ svg {
 }
 
 
+
 /* =========================================
    HEADER
-   CART | SEARCHBAR | HAMBURGER
 ========================================= */
 
 .site-header {
@@ -249,7 +277,8 @@ svg {
 
     gap: 11px;
 
-    padding: 0 14px;
+    padding:
+        0 14px;
 
     background:
         rgba(8,7,6,.97);
@@ -258,9 +287,11 @@ svg {
         1px solid
         rgba(218,175,108,.14);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
 }
+
 
 
 /* CART */
@@ -275,7 +306,8 @@ svg {
 
     background: none;
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     position: relative;
 
@@ -315,9 +347,11 @@ svg {
 
     place-items: center;
 
-    background: var(--gold-light);
+    background:
+        var(--gold-light);
 
-    color: #171108;
+    color:
+        #171108;
 
     font-size: 10px;
 
@@ -326,7 +360,8 @@ svg {
 }
 
 
-/* SEARCH BAR */
+
+/* SEARCH */
 
 .header-search {
 
@@ -347,7 +382,8 @@ svg {
     background:
         rgba(255,255,255,.025);
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     display: flex;
 
@@ -355,14 +391,16 @@ svg {
 
     justify-content: space-between;
 
-    padding: 0 12px;
+    padding:
+        0 12px;
 
 }
 
 
 .search-placeholder {
 
-    color: #8e887f;
+    color:
+        #8e887f;
 
     font-size: 12px;
 
@@ -384,6 +422,7 @@ svg {
     flex: none;
 
 }
+
 
 
 /* HAMBURGER */
@@ -411,7 +450,8 @@ svg {
 
     height: 2px;
 
-    background: var(--gold-light);
+    background:
+        var(--gold-light);
 
 }
 
@@ -431,8 +471,9 @@ svg {
 }
 
 
+
 /* =========================================
-   MOBILE MENU
+   MENU
 ========================================= */
 
 .menu-overlay,
@@ -476,13 +517,15 @@ svg {
 
     z-index: 200;
 
-    width: min(86vw,370px);
+    width:
+        min(86vw,370px);
 
     height: 100dvh;
 
     padding: 23px;
 
-    background: #0b0908;
+    background:
+        #0b0908;
 
     border-left:
         1px solid
@@ -545,9 +588,12 @@ svg {
 
     place-items: center;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
-    font-family: Georgia,serif;
+    font-family:
+        Georgia,
+        serif;
 
 }
 
@@ -556,9 +602,12 @@ svg {
 
     display: block;
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
-    font-family: Georgia,serif;
+    font-family:
+        Georgia,
+        serif;
 
     font-size: 11px;
 
@@ -571,7 +620,8 @@ svg {
 
     display: block;
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 7px;
 
@@ -588,7 +638,8 @@ svg {
 
     background: none;
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 34px;
 
@@ -610,13 +661,15 @@ svg {
 
 .mobile-navigation a {
 
-    padding: 18px 0;
+    padding:
+        18px 0;
 
     border-bottom:
         1px solid
         rgba(218,175,108,.12);
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 18px;
 
@@ -627,7 +680,8 @@ svg {
 
     margin-top: auto;
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 9px;
 
@@ -638,8 +692,9 @@ svg {
 }
 
 
+
 /* =========================================
-   SEARCH
+   SEARCH PANEL
 ========================================= */
 
 .search-panel {
@@ -694,7 +749,8 @@ svg {
 
     padding-top: 75px;
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 10px;
 
@@ -728,7 +784,8 @@ svg {
 
     height: 24px;
 
-    stroke: var(--cream);
+    stroke:
+        var(--cream);
 
 }
 
@@ -740,18 +797,17 @@ svg {
     height: 60px;
 
     padding:
-        0
-        45px
-        0
-        5px;
+        0 45px 0 5px;
 
-    background: transparent;
+    background:
+        transparent;
 
     border: none;
 
     outline: none;
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 19px;
 
@@ -783,21 +839,23 @@ svg {
         1px solid
         var(--line);
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
 }
 
 
+
 /* =========================================
    HERO
-   LEFT TEXT
+   NEW BANNER IMAGE
 ========================================= */
 
 .hero {
 
     position: relative;
 
-    min-height: 635px;
+    min-height: 650px;
 
     overflow: hidden;
 
@@ -815,11 +873,15 @@ svg {
     z-index: -2;
 
     background-image:
-        url("assets/store.jpg");
+        url(
+            "assets/3397D10E-4701-41BC-908C-0A658E87A07A.jpeg"
+        );
 
     background-size: cover;
 
-    background-position: center;
+    background-position: center center;
+
+    background-repeat: no-repeat;
 
 }
 
@@ -834,146 +896,51 @@ svg {
 
     background:
         linear-gradient(
-            90deg,
-            rgba(5,4,3,.97) 0%,
-            rgba(5,4,3,.80) 42%,
-            rgba(5,4,3,.18) 100%
-        ),
-        linear-gradient(
-            0deg,
-            rgba(5,4,3,.58),
-            transparent 65%
+            180deg,
+            rgba(0,0,0,.05) 0%,
+            rgba(0,0,0,.08) 50%,
+            rgba(0,0,0,.58) 100%
         );
 
 }
 
 
+/*
+   IMPORTANT:
+   ORIGINAL BRANDS | PREMIUM STYLE
+   IS NOT DISPLAYED ON THE HERO.
+*/
+
+
 .hero-content {
 
-    max-width: 560px;
+    position: absolute;
 
-    padding:
-        58px
-        30px
-        75px;
+    left: 50%;
 
-    direction: ltr;
+    bottom: 62px;
 
-    text-align: left;
+    transform:
+        translateX(-50%);
 
-}
-
-
-.hero-eyebrow {
-
-    color: var(--gold-light);
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 24px;
-
-}
-
-
-.hero-eyebrow span {
-
-    margin: 0 5px;
-
-}
-
-
-.hero-title {
-
-    color: var(--cream);
-
-    font-size: 57px;
-
-    line-height: .98;
-
-    margin-bottom: 28px;
-
-    direction: rtl;
-
-    text-align: left;
-
-}
-
-
-.hero-location {
-
-    color: var(--gold-light);
-
-    font-size: 17px;
+    width: 100%;
 
     display: flex;
+
+    justify-content: center;
 
     align-items: center;
 
-    justify-content: flex-start;
-
-    gap: 8px;
-
     direction: rtl;
-
-}
-
-
-.location-pin {
-
-    color: var(--gold-light);
-
-    font-size: 16px;
-
-}
-
-
-.gold-line {
-
-    width: 150px;
-
-    height: 1px;
-
-    background: var(--gold);
-
-    margin: 23px 0;
-
-}
-
-
-.hero-slogan {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-
-    color: var(--cream);
-
-    font-family: Georgia,serif;
-
-    font-size: 13px;
-
-    letter-spacing: 4px;
-
-    line-height: 1.6;
-
-    direction: ltr;
-
-    text-align: left;
-
-    margin-bottom: 30px;
 
 }
 
 
 .primary-button {
 
-    min-width: 220px;
+    min-width: 190px;
 
-    height: 59px;
+    height: 53px;
 
     display: inline-flex;
 
@@ -981,7 +948,7 @@ svg {
 
     justify-content: center;
 
-    gap: 23px;
+    gap: 22px;
 
     background:
         linear-gradient(
@@ -990,7 +957,8 @@ svg {
             #d9ad69
         );
 
-    color: #171108;
+    color:
+        #171108;
 
     border-radius: 4px;
 
@@ -998,16 +966,18 @@ svg {
 
     box-shadow:
         0 14px 35px
-        rgba(0,0,0,.35);
+        rgba(0,0,0,.42);
 
 }
 
 
 .primary-button span {
 
-    font-family: Arial,sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
 
-    font-size: 24px;
+    font-size: 23px;
 
 }
 
@@ -1016,22 +986,24 @@ svg {
 
     position: absolute;
 
-    bottom: 20px;
+    bottom: 15px;
 
     left: 50%;
 
     transform:
         translateX(-50%);
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 22px;
 
 }
 
 
+
 /* =========================================
-   SECTION
+   SECTIONS
 ========================================= */
 
 .section {
@@ -1061,7 +1033,8 @@ svg {
 
 .section-overline {
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 9px;
 
@@ -1074,7 +1047,8 @@ svg {
 
 .section-title {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 28px;
 
@@ -1083,7 +1057,8 @@ svg {
 
 .view-all {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 12px;
 
@@ -1094,6 +1069,7 @@ svg {
     padding-bottom: 4px;
 
 }
+
 
 
 /* =========================================
@@ -1109,8 +1085,7 @@ svg {
     overflow-x: auto;
 
     padding:
-        3px 1px
-        13px;
+        3px 1px 13px;
 
     scroll-snap-type:
         x mandatory;
@@ -1163,7 +1138,8 @@ svg {
 
     text-align: center;
 
-    padding: 15px 10px;
+    padding:
+        15px 10px;
 
     direction: rtl;
 
@@ -1192,7 +1168,8 @@ svg {
 
     place-items: center;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -1210,7 +1187,8 @@ svg {
 
 .category-card h3 {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 20px;
 
@@ -1219,7 +1197,8 @@ svg {
 
 .category-card span {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 10px;
 
@@ -1230,7 +1209,8 @@ svg {
 
     text-align: center;
 
-    color: #766e63;
+    color:
+        #766e63;
 
     font-size: 9px;
 
@@ -1239,9 +1219,9 @@ svg {
 }
 
 
+
 /* =========================================
-   PRODUCTS
-   SLOW LEFT -> RIGHT
+   PRODUCT SLIDER
 ========================================= */
 
 .product-slider {
@@ -1275,7 +1255,8 @@ svg {
 .product-slider:hover
 .products-track {
 
-    animation-play-state: paused;
+    animation-play-state:
+        paused;
 
 }
 
@@ -1334,7 +1315,8 @@ svg {
     background:
         rgba(0,0,0,.45);
 
-    color: white;
+    color:
+        white;
 
     font-size: 22px;
 
@@ -1343,7 +1325,8 @@ svg {
 
 .wishlist-button.liked {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -1352,7 +1335,8 @@ svg {
 
     position: relative;
 
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio:
+        1 / 1.08;
 
     overflow: hidden;
 
@@ -1367,46 +1351,55 @@ svg {
             rgba(0,0,0,.15),
             rgba(0,0,0,.55)
         ),
-        url("assets/store.jpg");
+        url(
+            "assets/3397D10E-4701-41BC-908C-0A658E87A07A.jpeg"
+        );
 
-    background-size: cover;
+    background-size:
+        cover;
 
-    background-position: center;
+    background-position:
+        center;
 
 }
 
 
 .product-one {
 
-    background-position: 40% center;
+    background-position:
+        40% center;
 
 }
 
 
 .product-two {
 
-    background-position: 72% center;
+    background-position:
+        72% center;
 
 }
 
 
 .product-three {
 
-    background-position: 90% center;
+    background-position:
+        90% center;
 
 }
 
 
 .product-four {
 
-    background-position: 20% center;
+    background-position:
+        20% center;
 
 }
 
 
 .product-five {
 
-    background-position: 60% center;
+    background-position:
+        60% center;
 
 }
 
@@ -1425,7 +1418,8 @@ svg {
     background:
         var(--gold-light);
 
-    color: #171108;
+    color:
+        #171108;
 
     border-radius: 2px;
 
@@ -1443,7 +1437,8 @@ svg {
 
 .product-name {
 
-    color: #e3ded5;
+    color:
+        #e3ded5;
 
     font-size: 13px;
 
@@ -1467,7 +1462,8 @@ svg {
 
 .product-bottom strong {
 
-    color: white;
+    color:
+        white;
 
     font-size: 14px;
 
@@ -1484,9 +1480,11 @@ svg {
         1px solid
         var(--gold);
 
-    background: transparent;
+    background:
+        transparent;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     border-radius: 50%;
 
@@ -1499,13 +1497,15 @@ svg {
 
     text-align: center;
 
-    color: #766e63;
+    color:
+        #766e63;
 
     font-size: 9px;
 
     margin-top: 10px;
 
 }
+
 
 
 /* =========================================
@@ -1532,7 +1532,8 @@ svg {
 
 .brand-message-overline {
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 9px;
 
@@ -1545,7 +1546,8 @@ svg {
 
 .brand-message h2 {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 30px;
 
@@ -1554,7 +1556,8 @@ svg {
 
 .brand-message p {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 19px;
 
@@ -1569,12 +1572,14 @@ svg {
 
     height: 1px;
 
-    background: var(--gold);
+    background:
+        var(--gold);
 
     margin:
         18px auto 0;
 
 }
+
 
 
 /* =========================================
@@ -1590,7 +1595,8 @@ svg {
 
 .about-text {
 
-    color: #c3bdb4;
+    color:
+        #c3bdb4;
 
     font-size: 16px;
 
@@ -1599,6 +1605,7 @@ svg {
     margin-top: 14px;
 
 }
+
 
 
 /* =========================================
@@ -1631,7 +1638,8 @@ svg {
 
 .contact h2 {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 29px;
 
@@ -1648,24 +1656,28 @@ svg {
 
     gap: 14px;
 
-    padding: 15px 0;
+    padding:
+        15px 0;
 
     border-bottom:
         1px solid
         rgba(218,175,108,.12);
 
-    color: #ddd7cd;
+    color:
+        #ddd7cd;
 
 }
 
 
 .contact-row span:first-child {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 20px;
 
 }
+
 
 
 /* =========================================
@@ -1687,7 +1699,8 @@ svg {
 
     height: 100dvh;
 
-    background: #0b0908;
+    background:
+        #0b0908;
 
     border-left:
         1px solid
@@ -1696,7 +1709,8 @@ svg {
     transform:
         translateX(100%);
 
-    transition: .35s;
+    transition:
+        .35s;
 
     display: flex;
 
@@ -1717,7 +1731,8 @@ svg {
 
     height: 75px;
 
-    padding: 0 20px;
+    padding:
+        0 20px;
 
     display: flex;
 
@@ -1734,7 +1749,8 @@ svg {
 
 .cart-header h2 {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 22px;
 
@@ -1756,7 +1772,8 @@ svg {
 
     text-align: center;
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
     padding-top: 100px;
 
@@ -1778,7 +1795,8 @@ svg {
 
     gap: 12px;
 
-    padding: 13px 0;
+    padding:
+        13px 0;
 
     border-bottom:
         1px solid
@@ -1796,7 +1814,9 @@ svg {
     border-radius: 4px;
 
     background:
-        url("assets/store.jpg")
+        url(
+            "assets/3397D10E-4701-41BC-908C-0A658E87A07A.jpeg"
+        )
         center / cover;
 
 }
@@ -1811,7 +1831,8 @@ svg {
 
 .cart-item-name {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
     font-size: 14px;
 
@@ -1820,7 +1841,8 @@ svg {
 
 .cart-item-price {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 13px;
 
@@ -1835,7 +1857,8 @@ svg {
 
     background: none;
 
-    color: #999;
+    color:
+        #999;
 
     font-size: 22px;
 
@@ -1844,7 +1867,8 @@ svg {
 
 .cart-footer {
 
-    padding: 18px;
+    padding:
+        18px;
 
     border-top:
         1px solid
@@ -1866,14 +1890,16 @@ svg {
 
 .cart-total span {
 
-    color: var(--cream);
+    color:
+        var(--cream);
 
 }
 
 
 .cart-total strong {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -1891,11 +1917,13 @@ svg {
     background:
         var(--gold-light);
 
-    color: #171108;
+    color:
+        #171108;
 
     font-size: 16px;
 
 }
+
 
 
 /* =========================================
@@ -1921,7 +1949,8 @@ svg {
     background:
         var(--cream);
 
-    color: #171108;
+    color:
+        #171108;
 
     border-radius: 3px;
 
@@ -1948,6 +1977,7 @@ svg {
         translate(-50%,0);
 
 }
+
 
 
 /* =========================================
@@ -1998,7 +2028,8 @@ svg {
 
     gap: 5px;
 
-    color: #aaa49c;
+    color:
+        #aaa49c;
 
     font-size: 10px;
 
@@ -2007,7 +2038,8 @@ svg {
 
 .bottom-nav-item.active {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -2023,11 +2055,13 @@ svg {
 }
 
 
+
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width:430px) {
+
 
     .site-header {
 
@@ -2038,7 +2072,8 @@ svg {
 
         gap: 8px;
 
-        padding: 0 12px;
+        padding:
+            0 12px;
 
     }
 
@@ -2064,44 +2099,39 @@ svg {
     }
 
 
+    .hero-background {
+
+        background-position:
+            center center;
+
+    }
+
+
     .hero-content {
 
-        padding:
-            55px
-            27px
-            70px;
-
-    }
-
-
-    .hero-title {
-
-        font-size: 53px;
-
-    }
-
-
-    .hero-location {
-
-        font-size: 15px;
+        bottom: 60px;
 
     }
 
 
     .category-card {
 
-        flex-basis: 124px;
+        flex-basis:
+            124px;
 
-        min-height: 155px;
+        min-height:
+            155px;
 
     }
 
 
     .product-card {
 
-        width: 165px;
+        width:
+            165px;
 
-        flex-basis: 165px;
+        flex-basis:
+            165px;
 
     }
 
@@ -2116,11 +2146,13 @@ svg {
 
     .section-title {
 
-        font-size: 26px;
+        font-size:
+            26px;
 
     }
 
 }
+
 
 
 /* =========================================
@@ -2129,9 +2161,11 @@ svg {
 
 @media (min-width:700px) {
 
+
     .site-header {
 
-        height: 88px;
+        height:
+            88px;
 
         padding:
             0 40px;
@@ -2141,46 +2175,51 @@ svg {
 
     .hero {
 
-        min-height: 720px;
+        min-height:
+            720px;
+
+    }
+
+
+    .hero-background {
+
+        background-position:
+            center center;
 
     }
 
 
     .hero-content {
 
-        padding:
-            100px
-            70px;
-
-    }
-
-
-    .hero-title {
-
-        font-size: 88px;
+        bottom:
+            80px;
 
     }
 
 
     .bottom-navigation {
 
-        display: none;
+        display:
+            none;
 
     }
 
 
     .category-card {
 
-        flex-basis: 160px;
+        flex-basis:
+            160px;
 
     }
 
 
     .product-card {
 
-        width: 210px;
+        width:
+            210px;
 
-        flex-basis: 210px;
+        flex-basis:
+            210px;
 
     }
 
