@@ -1,998 +1,839 @@
 <!DOCTYPE html>
 <html lang="ku" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TRILLIONAIRE COLLECTION</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#080706">
+    <meta name="description" content="Trillionaire Collection - Original Brands, Premium Style">
+    <title>Trillionaire Collection</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ================= LOADER ================= -->
-  <div class="loader" id="loader">
-    <div class="loader-logo">TRILLIONAIRE</div>
-    <div class="loader-line"></div>
-  </div>
+<div class="page-loader" id="page-loader">
+    <div class="loader-logo">
+        <div class="loader-symbol">TN</div>
+        <div class="loader-title">TRILLIONAIRE</div>
+        <div class="loader-subtitle">COLLECTION</div>
+    </div>
+</div>
 
 
-  <!-- ================= HEADER ================= -->
-  <header class="header">
+<!-- HEADER: CART | SEARCHBAR | HAMBURGER -->
+<header class="site-header">
 
-    <div class="header-inner">
+    <button class="header-control cart-control" id="cart-button" type="button" aria-label="Cart">
+        <svg viewBox="0 0 24 24">
+            <path d="M5 8h14l-1 12H6L5 8Z"></path>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+        </svg>
+        <span id="cart-count">0</span>
+    </button>
 
-      <!-- CART -->
-      <button class="header-cart" id="cartBtn" aria-label="Cart">
-        <span class="cart-icon">🛒</span>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
+    <button class="header-search" id="search-button" type="button" aria-label="Search">
+        <span class="search-placeholder rabar">گەڕان بۆ بەرهەم...</span>
+        <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="M16 16L21 21"></path>
+        </svg>
+    </button>
+
+    <button class="header-control menu-button" id="menu-button" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
 
 
-      <!-- SEARCH -->
-      <div class="header-search">
+<!-- MENU -->
+<div class="menu-overlay" id="menu-overlay"></div>
 
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="گەڕان..."
-          autocomplete="off"
-        >
+<aside class="mobile-menu" id="mobile-menu">
 
-        <button id="searchBtn" aria-label="Search">
-          🔍
+    <div class="mobile-menu-top">
+
+        <div class="mobile-logo">
+            <div class="logo-symbol small">TN</div>
+
+            <div>
+                <strong>TRILLIONAIRE</strong>
+                <small>COLLECTION</small>
+            </div>
+        </div>
+
+        <button id="close-menu" class="close-button" type="button">
+            ×
         </button>
-
-      </div>
-
-
-      <!-- MENU -->
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
     </div>
 
-  </header>
 
-
-
-  <!-- ================= MOBILE MENU ================= -->
-  <div class="menu-overlay" id="menuOverlay">
-
-    <div class="mobile-menu">
-
-      <button class="close-menu" id="closeMenu">
-        ×
-      </button>
-
-      <div class="menu-logo">
-        TRILLIONAIRE
-      </div>
-
-      <nav class="menu-links">
+    <nav class="mobile-navigation">
 
         <a href="#home">
-          سەرەتا
+            سەرەتا
         </a>
 
         <a href="#categories">
-          بەشەکان
+            بەشەکان
         </a>
 
         <a href="#new-arrivals">
-          بەرهەمە نوێیەکان
+            بەرهەمە نوێیەکان
         </a>
 
-        <a href="#">
-          پۆشاک
-        </a>
+    </nav>
 
-        <a href="#">
-          پێڵاو
-        </a>
 
-        <a href="#">
-          جانتا
-        </a>
-
-        <a href="#">
-          بەڵت
-        </a>
-
-      </nav>
-
-      <div class="menu-footer">
-        ORIGINAL BRANDS
-        <br>
+    <div class="menu-footer">
+        ORIGINAL BRANDS<br>
         PREMIUM STYLE
-      </div>
-
     </div>
 
-  </div>
+</aside>
 
 
+<!-- SEARCH PANEL -->
+<div class="search-panel" id="search-panel">
 
-  <!-- ================= SEARCH PANEL ================= -->
-  <div class="search-panel" id="searchPanel">
+    <div class="search-container">
 
-    <div class="search-panel-inner">
-
-      <button class="close-search" id="closeSearch">
-        ×
-      </button>
-
-      <input
-        type="text"
-        id="mobileSearchInput"
-        placeholder="بەرهەم بگەڕێ..."
-      >
-
-      <div id="searchResults" class="search-results"></div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- ================= MAIN ================= -->
-  <main id="home">
-
-
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-
-      <div class="hero-background"></div>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-
-        <div class="hero-location">
-          بەختیاری - نزیک گوڵان مۆڵ
-        </div>
-
-        <h1>
-          TRILLIONAIRE
-        </h1>
-
-        <p>
-          COLLECTION
-        </p>
-
-        <button class="hero-button" id="shopNowBtn">
-          کڕین ئێستا
+        <button id="search-close" class="close-button" type="button">
+            ×
         </button>
 
-      </div>
+        <div class="search-label">
+            SEARCH
+        </div>
 
-      <div class="hero-scroll">
-        <span></span>
-      </div>
+        <div class="search-box">
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                <path d="M16 16L21 21"></path>
+            </svg>
+
+            <input
+                id="search-input"
+                type="search"
+                placeholder="گەڕان بۆ بەرهەم..."
+            >
+
+        </div>
+
+        <div
+            class="search-results"
+            id="search-results"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-background"></div>
+
+        <div class="hero-overlay"></div>
+
+
+        <!-- LEFT SIDE BANNER TEXT -->
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+                ORIGINAL BRANDS
+                <span>|</span>
+                PREMIUM STYLE
+            </div>
+
+
+            <h1 class="hero-title rabar">
+                تڕیلیۆنێر<br>
+                کۆلەکشن
+            </h1>
+
+
+            <div class="hero-location rabar">
+
+                <span class="location-pin">
+                    ●
+                </span>
+
+                بەختیاری - نزیک گوڵان مۆڵ
+
+            </div>
+
+
+            <div class="gold-line"></div>
+
+
+            <div class="hero-slogan">
+                <span>MORE THAN FASHION</span>
+                <span>A LIFESTYLE</span>
+            </div>
+
+
+            <a
+                href="#new-arrivals"
+                class="primary-button rabar"
+            >
+                کڕین ئێستا
+                <span>←</span>
+            </a>
+
+        </div>
+
+
+        <div class="scroll-indicator">
+            ↓
+        </div>
 
     </section>
 
 
 
-    <!-- ================= CATEGORIES ================= -->
+    <!-- CATEGORIES -->
     <section
-      class="section categories-section"
-      id="categories"
+        class="section categories-section"
+        id="categories"
     >
 
-      <div class="categories-slider" id="categoriesSlider">
 
-
-        <!-- SHOES -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20 65
-                   C30 60 35 50 38 35
-                   L55 35
-                   C57 48 65 55 80 60
-                   L85 65
-                   L85 75
-                   L20 75
-                   Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <path
-                d="M38 35 L48 25 L58 35"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            پێڵاو
-          </span>
-
-        </div>
-
-
-
-        <!-- JACKET -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <path
-                d="M35 25
-                   L50 35
-                   L65 25
-                   L80 40
-                   L70 75
-                   L55 75
-                   L55 45
-                   L45 45
-                   L45 75
-                   L30 75
-                   L20 40
-                   Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <line
-                x1="50"
-                y1="35"
-                x2="50"
-                y2="70"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            جاکەت
-          </span>
-
-        </div>
-
-
-
-        <!-- BELT -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                x="15"
-                y="40"
-                width="70"
-                height="20"
-                rx="4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <rect
-                x="42"
-                y="35"
-                width="20"
-                height="30"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            بەڵت
-          </span>
-
-        </div>
-
-
-
-        <!-- BAG -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                x="20"
-                y="35"
-                width="60"
-                height="45"
-                rx="5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <path
-                d="M35 35
-                   C35 15 65 15 65 35"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            جانتا
-          </span>
-
-        </div>
-
-
-
-        <!-- T-SHIRT -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <path
-                d="M35 25
-                   L50 35
-                   L65 25
-                   L80 35
-                   L70 55
-                   L60 48
-                   L60 80
-                   L40 80
-                   L40 48
-                   L30 55
-                   L20 35
-                   Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            تی‌شێرت
-          </span>
-
-        </div>
-
-
-
-        <!-- WATCH -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                x="35"
-                y="15"
-                width="30"
-                height="70"
-                rx="12"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <circle
-                cx="50"
-                cy="50"
-                r="12"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            کاتژمێر
-          </span>
-
-        </div>
-
-
-
-        <!-- ACCESSORIES -->
-        <div class="category-card">
-
-          <div class="category-icon">
-
-            <svg
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <circle
-                cx="50"
-                cy="50"
-                r="25"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-              <circle
-                cx="50"
-                cy="50"
-                r="8"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-
-            </svg>
-
-          </div>
-
-          <span>
-            ئەکسسوار
-          </span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= NEW PRODUCTS ================= -->
-    <section
-      class="section products-section"
-      id="new-arrivals"
-    >
-
-      <div class="section-top">
-
-        <a
-          href="#"
-          class="view-all"
-          id="viewAllBtn"
+        <div
+            class="category-slider"
+            id="category-slider"
         >
-          بینینی هەموو →
-        </a>
-
-      </div>
 
 
-      <div
-        class="products-slider"
-        id="productsSlider"
-      >
-
-
-        <!-- PRODUCT 1 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
+            <!-- SHOES -->
+            <a
+                href="#new-arrivals"
+                class="category-card"
             >
 
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
+                <div class="category-icon">
 
-            <span class="product-badge">
-              نوێ
-            </span>
+                    <svg viewBox="0 0 64 64">
 
-          </div>
+                        <path d="M10 43c8-1 13-5 16-14l3-8 9 9c3 3 7 5 14 6 3 1 4 4 2 7-2 3-7 4-13 4H13c-4 0-5-2-3-4Z"/>
 
-          <div class="product-info">
+                        <path d="M29 21c3 4 7 7 12 9"/>
 
-            <h3>
-              Luxury Jacket
-            </h3>
+                        <path d="M43 39h7"/>
 
-            <p class="product-category">
-              جاکەت
-            </p>
+                    </svg>
 
-            <div class="product-bottom">
+                </div>
 
-              <span class="product-price">
-                $250
-              </span>
+                <h3 class="rabar">
+                    پێڵاو
+                </h3>
 
-              <button
-                class="add-cart"
-                data-name="Luxury Jacket"
-                data-price="250"
-              >
-                +
-              </button>
+                <span class="rabar">
+                    کڕین ئێستا ←
+                </span>
 
-            </div>
-
-          </div>
-
-        </article>
+            </a>
 
 
 
-        <!-- PRODUCT 2 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
+            <!-- JACKET -->
+            <a
+                href="#new-arrivals"
+                class="category-card"
             >
 
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
+                <div class="category-icon">
 
-          </div>
+                    <svg viewBox="0 0 64 64">
 
-          <div class="product-info">
+                        <path d="M25 10l-10 7-8 18 10 4 4-8v23h26V31l4 8 10-4-8-18-10-7-9 9-9-9Z"/>
 
-            <h3>
-              Premium Shoes
-            </h3>
+                        <path d="M32 19v35"/>
 
-            <p class="product-category">
-              پێڵاو
-            </p>
+                        <path d="M25 10c1 7 13 7 14 0"/>
 
-            <div class="product-bottom">
+                    </svg>
 
-              <span class="product-price">
-                $190
-              </span>
+                </div>
 
-              <button
-                class="add-cart"
-                data-name="Premium Shoes"
-                data-price="190"
-              >
-                +
-              </button>
+                <h3 class="rabar">
+                    جاکەت
+                </h3>
 
-            </div>
+                <span class="rabar">
+                    کڕین ئێستا ←
+                </span>
 
-          </div>
-
-        </article>
+            </a>
 
 
 
-        <!-- PRODUCT 3 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
+            <!-- BELT -->
+            <a
+                href="#new-arrivals"
+                class="category-card"
             >
 
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
+                <div class="category-icon">
 
-          </div>
+                    <svg viewBox="0 0 64 64">
 
-          <div class="product-info">
+                        <path d="M7 25h50v14H7z"/>
 
-            <h3>
-              Luxury Belt
-            </h3>
+                        <rect
+                            x="28"
+                            y="23"
+                            width="12"
+                            height="18"
+                            rx="2"
+                        />
 
-            <p class="product-category">
-              بەڵت
-            </p>
+                        <path d="M33 27v10M29 32h10"/>
 
-            <div class="product-bottom">
+                        <path d="M7 32h18M40 32h17"/>
 
-              <span class="product-price">
-                $120
-              </span>
+                    </svg>
 
-              <button
-                class="add-cart"
-                data-name="Luxury Belt"
-                data-price="120"
-              >
-                +
-              </button>
+                </div>
 
-            </div>
+                <h3 class="rabar">
+                    کەمەر
+                </h3>
 
-          </div>
+                <span class="rabar">
+                    کڕین ئێستا ←
+                </span>
 
-        </article>
+            </a>
 
 
 
-        <!-- PRODUCT 4 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
+            <!-- T-SHIRT -->
+            <a
+                href="#new-arrivals"
+                class="category-card"
             >
 
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
+                <div class="category-icon">
 
-          </div>
+                    <svg viewBox="0 0 64 64">
 
-          <div class="product-info">
+                        <path d="M23 10l9 7 9-7 13 8-7 12-6-4v28H23V26l-6 4-7-12 13-8Z"/>
 
-            <h3>
-              Premium Bag
-            </h3>
+                        <path d="M27 12c0 5 10 5 10 0"/>
 
-            <p class="product-category">
-              جانتا
-            </p>
+                    </svg>
 
-            <div class="product-bottom">
+                </div>
 
-              <span class="product-price">
-                $320
-              </span>
+                <h3 class="rabar">
+                    تیشێرت
+                </h3>
 
-              <button
-                class="add-cart"
-                data-name="Premium Bag"
-                data-price="320"
-              >
-                +
-              </button>
+                <span class="rabar">
+                    کڕین ئێستا ←
+                </span>
 
-            </div>
-
-          </div>
-
-        </article>
+            </a>
 
 
 
-        <!-- PRODUCT 5 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
+            <!-- BAG -->
+            <a
+                href="#new-arrivals"
+                class="category-card"
             >
 
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
+                <div class="category-icon">
 
-          </div>
+                    <svg viewBox="0 0 64 64">
 
-          <div class="product-info">
+                        <path d="M12 23h40l-3 31H15l-3-31Z"/>
 
-            <h3>
-              Classic T-Shirt
-            </h3>
+                        <path d="M23 23v-5a9 9 0 0 1 18 0v5"/>
 
-            <p class="product-category">
-              تی‌شێرت
-            </p>
+                    </svg>
 
-            <div class="product-bottom">
+                </div>
 
-              <span class="product-price">
-                $95
-              </span>
+                <h3 class="rabar">
+                    جانتا
+                </h3>
 
-              <button
-                class="add-cart"
-                data-name="Classic T-Shirt"
-                data-price="95"
-              >
-                +
-              </button>
+                <span class="rabar">
+                    کڕین ئێستا ←
+                </span>
 
-            </div>
+            </a>
 
-          </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 6 -->
-        <article class="product-card">
-
-          <div class="product-image">
-
-            <img
-              src="assets/store.jpg"
-              alt="Product"
-            >
-
-            <button
-              class="wishlist-btn"
-              aria-label="Wishlist"
-            >
-              ♡
-            </button>
-
-          </div>
-
-          <div class="product-info">
-
-            <h3>
-              Luxury Watch
-            </h3>
-
-            <p class="product-category">
-              کاتژمێر
-            </p>
-
-            <div class="product-bottom">
-
-              <span class="product-price">
-                $450
-              </span>
-
-              <button
-                class="add-cart"
-                data-name="Luxury Watch"
-                data-price="450"
-              >
-                +
-              </button>
-
-            </div>
-
-          </div>
-
-        </article>
-
-      </div>
+        </div>
 
     </section>
 
-  </main>
+
+
+    <!-- NEW ARRIVALS -->
+    <section
+        class="section products-section"
+        id="new-arrivals"
+    >
+
+
+        <div class="section-heading">
+
+            <a
+                href="#"
+                class="view-all rabar"
+            >
+                بینینی هەموو →
+            </a>
+
+        </div>
+
+
+        <div class="product-slider">
+
+            <div
+                class="products-track"
+                id="products-track"
+            >
+
+
+                <!-- PRODUCT 1 -->
+                <article class="product-card">
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-one">
+
+                        <span class="new-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3 class="product-name rabar">
+                            تی شێرت بالەنسیگا
+                        </h3>
+
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                $450
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="تی شێرت بالەنسیگا"
+                                data-price="450"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
 
 
-  <!-- ================= CART ================= -->
-  <div
+                <!-- PRODUCT 2 -->
+                <article class="product-card">
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-two">
+
+                        <span class="new-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3 class="product-name rabar">
+                            نایک ایر فورس
+                        </h3>
+
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                $120
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="نایک ایر فورس"
+                                data-price="120"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 3 -->
+                <article class="product-card">
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-three">
+
+                        <span class="new-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3 class="product-name rabar">
+                            کەمیزی لۆی ڤیتۆن
+                        </h3>
+
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                $620
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="کەمیزی لۆی ڤیتۆن"
+                                data-price="620"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 4 -->
+                <article class="product-card">
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-four">
+
+                        <span class="new-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3 class="product-name rabar">
+                            جاکەتی پڕیمیۆم
+                        </h3>
+
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                $580
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="جاکەتی پڕیمیۆم"
+                                data-price="580"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 5 -->
+                <article class="product-card">
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-five">
+
+                        <span class="new-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3 class="product-name rabar">
+                            کەمەری پڕیمیۆم
+                        </h3>
+
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                $190
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="کەمەری پڕیمیۆم"
+                                data-price="190"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="product-scroll-note rabar">
+            بە هێواشی بۆ لای ڕاست دەجوڵێت
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- CART -->
+<div
     class="cart-overlay"
-    id="cartOverlay"
-  >
+    id="cart-overlay"
+></div>
 
-    <div class="cart-drawer">
 
-      <div class="cart-header">
+<aside
+    class="cart-drawer"
+    id="cart-drawer"
+>
 
-        <h2>
-          سەبەتە
+    <div class="cart-header">
+
+        <h2 class="rabar">
+            سەبەتەکەت
         </h2>
 
         <button
-          class="close-cart"
-          id="closeCart"
+            id="close-cart"
+            class="close-button"
+            type="button"
         >
-          ×
+            ×
         </button>
-
-      </div>
-
-
-      <div
-        class="cart-items"
-        id="cartItems"
-      >
-
-        <div class="empty-cart">
-          سەبەتەکەت بەتاڵە
-        </div>
-
-      </div>
-
-
-      <div class="cart-footer">
-
-        <div class="cart-total">
-
-          <span>
-            کۆی گشتی
-          </span>
-
-          <strong id="cartTotal">
-            $0
-          </strong>
-
-        </div>
-
-        <button
-          class="checkout-btn"
-          id="checkoutBtn"
-        >
-          تەواوکردنی کڕین
-        </button>
-
-      </div>
 
     </div>
 
-  </div>
+
+    <div
+        class="cart-items"
+        id="cart-items"
+    >
+
+        <div class="empty-cart">
+
+            <div>
+                🛍
+            </div>
+
+            <p class="rabar">
+                سەبەتەکەت بەتاڵە
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span class="rabar">
+                کۆی گشتی
+            </span>
+
+            <strong id="cart-total">
+                $0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button rabar"
+            id="checkout-button"
+            type="button"
+        >
+            تەواوکردنی کڕین →
+        </button>
+
+    </div>
+
+</aside>
 
 
 
-  <!-- ================= TOAST ================= -->
-  <div
+<!-- TOAST -->
+<div
     class="toast"
     id="toast"
-  >
-    بەرهەم زیادکرا بۆ سەبەتە
-  </div>
+></div>
 
 
 
-  <!-- ================= BOTTOM NAVIGATION ================= -->
-  <nav class="bottom-nav">
+<!-- BOTTOM NAV -->
+<nav class="bottom-navigation">
 
-    <button
-      class="bottom-nav-item active"
-      data-target="home"
+    <a
+        href="#home"
+        class="bottom-nav-item active"
     >
 
-      <span class="bottom-icon">
-        ⌂
-      </span>
+        <span class="bottom-icon">
+            ⌂
+        </span>
 
-      <span>
-        سەرەتا
-      </span>
+        <span class="rabar">
+            سەرەتا
+        </span>
 
-    </button>
+    </a>
 
 
-    <button
-      class="bottom-nav-item"
-      data-target="categories"
+    <a
+        href="#categories"
+        class="bottom-nav-item"
     >
 
-      <span class="bottom-icon">
-        ◈
-      </span>
+        <span class="bottom-icon">
+            ⊞
+        </span>
 
-      <span>
-        بەشەکان
-      </span>
+        <span class="rabar">
+            بەشەکان
+        </span>
 
-    </button>
+    </a>
 
 
-    <button
-      class="bottom-nav-item"
-      id="bottomSearch"
+    <a
+        href="#new-arrivals"
+        class="bottom-nav-item"
     >
 
-      <span class="bottom-icon">
-        ⌕
-      </span>
+        <span class="bottom-icon">
+            ♡
+        </span>
 
-      <span>
-        گەڕان
-      </span>
+        <span class="rabar">
+            دڵخوازەکان
+        </span>
 
-    </button>
+    </a>
 
 
-    <button
-      class="bottom-nav-item"
-      id="bottomCart"
+    <a
+        href="#contact"
+        class="bottom-nav-item"
     >
 
-      <span class="bottom-icon">
-        🛒
-      </span>
+        <span class="bottom-icon">
+            ♙
+        </span>
 
-      <span>
-        سەبەتە
-      </span>
+        <span class="rabar">
+            هەژمار
+        </span>
 
-    </button>
+    </a>
 
-
-    <button
-      class="bottom-nav-item"
-      id="bottomMenu"
-    >
-
-      <span class="bottom-icon">
-        ☰
-      </span>
-
-      <span>
-        لیست
-      </span>
-
-    </button>
-
-  </nav>
+</nav>
 
 
 
-  <!-- ================= JAVASCRIPT ================= -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
