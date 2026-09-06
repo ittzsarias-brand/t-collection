@@ -35,12 +35,19 @@
            SPACING + POSITION FIXES
         ========================================= */
 
-        /* Keep the hero button centered and slightly higher */
+        /* Keep the hero button centered */
         .hero-content {
-            transform: translateY(-18px);
+            width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center !important;
             align-items: center;
+            text-align: center;
+            transform: translateY(-18px);
+        }
+
+        .hero-content .primary-button {
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
 
 
