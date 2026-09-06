@@ -1,811 +1,1190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ku" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Trillionaire Collection - Original Brands, Premium Style"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080706"
+    >
 
     <title>Trillionaire Collection</title>
 
+    <!-- =========================================================
+         RABAR BOLD FONT
+         Your Rabar_037.ttf is in the project root.
+    ========================================================== -->
+
+    <style>
+        @font-face {
+            font-family: "Rabar";
+            src: url("Rabar_037.ttf") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <!-- Your main stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+    <!-- =========================================================
+         PAGE LOADER
+    ========================================================== -->
 
-<header class="header">
+    <div id="page-loader" class="page-loader">
 
-    <div class="top-location">
+        <div class="loader-logo">
 
-        <div class="location-icon">
-            📍
-        </div>
-
-        <div>
-            <div class="kurdish">
-                به‌ختیاری - نزیک گۆڵان موڵ
+            <div class="loader-symbol">
+                TN
             </div>
 
-            <div class="erbil">
-                ERBIL
+            <div class="loader-title">
+                TRILLIONAIRE
             </div>
+
+            <div class="loader-subtitle">
+                COLLECTION
+            </div>
+
         </div>
 
     </div>
 
 
-    <div class="main-logo">
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-        <div class="logo-square">
-            TC
-        </div>
+    <header class="site-header">
 
-        <div class="logo-name">
-            <div>TRILLIONAIRE</div>
-            <small>COLLECTION</small>
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- =========================
-     SEARCH / MENU / CART
-========================= -->
-
-<section class="toolbar">
-
-    <button
-        class="search-bar"
-        id="searchButton"
-        type="button"
-    >
-
-        <span class="search-icon">
-            🔍
-        </span>
-
-        <span class="search-text">
-            Search products...
-        </span>
-
-    </button>
-
-
-    <button
-        class="toolbar-button"
-        id="menuButton"
-        type="button"
-        aria-label="Menu"
-    >
-        ☰
-    </button>
-
-
-    <button
-        class="toolbar-button cart-button"
-        id="cartButton"
-        type="button"
-        aria-label="Shopping cart"
-    >
-
-        🛍
-
-        <span
-            class="cart-count"
-            id="cartCount"
-        >
-            0
-        </span>
-
-    </button>
-
-</section>
-
-
-<!-- =========================
-     MENU
-========================= -->
-
-<div
-    class="menu-panel"
-    id="menuPanel"
->
-
-    <a href="#products">
-        Products
-    </a>
-
-    <a href="#brands">
-        Brands
-    </a>
-
-    <a href="#about">
-        About
-    </a>
-
-    <a href="#contact">
-        Contact
-    </a>
-
-</div>
-
-
-<!-- =========================
-     PRODUCTS
-========================= -->
-
-<main>
-
-<section
-    class="products-section"
-    id="products"
->
-
-    <div class="section-header">
-
-        <div>
-
-            <div class="gold-label">
-                TRILLIONAIRE COLLECTION
-            </div>
-
-            <h1>
-                Featured Products
-            </h1>
-
-        </div>
-
-
+        <!-- Menu -->
         <button
-            class="filter-button"
-            id="filterButton"
+            class="header-button menu-button"
+            id="menu-button"
+            aria-label="Open menu"
             type="button"
         >
-            FILTER
-            <span>⌄</span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-    </div>
 
+        <!-- Logo -->
+        <a
+            href="#home"
+            class="site-logo"
+            aria-label="Trillionaire Collection"
+        >
+
+            <div class="logo-symbol">
+                TN
+            </div>
+
+            <div class="logo-text">
+
+                <span>
+                    TRILLIONAIRE
+                </span>
+
+                <small>
+                    COLLECTION
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- Header actions -->
+        <div class="header-actions">
+
+            <!-- Search -->
+            <button
+                class="header-button"
+                id="search-button"
+                aria-label="Search"
+                type="button"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle
+                        cx="10.8"
+                        cy="10.8"
+                        r="6.8"
+                    ></circle>
+
+                    <path
+                        d="M16 16L21 21"
+                    ></path>
+                </svg>
+
+            </button>
+
+
+            <!-- Cart -->
+            <button
+                class="header-button cart-button"
+                id="cart-button"
+                aria-label="Shopping cart"
+                type="button"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M5 8h14l-1 12H6L5 8Z"
+                    ></path>
+
+                    <path
+                        d="M9 8V6a3 3 0 0 1 6 0v2"
+                    ></path>
+                </svg>
+
+                <span
+                    class="cart-count"
+                    id="cart-count"
+                >
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE SIDE MENU
+    ========================================================== -->
 
     <div
-        class="filter-menu"
-        id="filterMenu"
+        class="menu-overlay"
+        id="menu-overlay"
+    ></div>
+
+
+    <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-hidden="true"
     >
 
-        <button data-filter="all">
-            ALL
-        </button>
+        <div class="mobile-menu-header">
 
-        <button data-filter="new">
-            NEW
-        </button>
+            <div class="mobile-menu-logo">
 
-        <button data-filter="limited">
-            LIMITED
-        </button>
-
-    </div>
-
-
-    <div class="products-grid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <article
-            class="product-card"
-            data-type="new"
-        >
-
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
-
-
-            <div class="product-image product-one">
-
-                <span class="product-tag">
-                    NEW
-                </span>
-
-                <div class="hoodie">
-                    <div class="hoodie-logo">
-                        TT
-                    </div>
+                <div class="logo-symbol">
+                    TN
                 </div>
-
-            </div>
-
-
-            <div class="product-info">
 
                 <div>
 
-                    <h2>
-                        Trillionaire Hoodie
-                    </h2>
-
-                    <p>
-                        Premium Cotton
-                    </p>
-
-                </div>
-
-                <strong>
-                    $120
-                </strong>
-
-            </div>
-
-
-            <button
-                class="add-cart"
-                type="button"
-            >
-                ADD TO BAG
-            </button>
-
-        </article>
-
-
-
-        <!-- PRODUCT 2 -->
-
-        <article
-            class="product-card"
-            data-type="new"
-        >
-
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
-
-
-            <div class="product-image product-two">
-
-                <span class="product-tag">
-                    NEW
-                </span>
-
-                <div class="tshirt">
-
-                    <div class="tshirt-logo">
+                    <strong>
                         TRILLIONAIRE
-                        <small>COLLECTION</small>
-                    </div>
+                    </strong>
+
+                    <small>
+                        COLLECTION
+                    </small>
 
                 </div>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div>
-
-                    <h2>
-                        Classic T-Shirt
-                    </h2>
-
-                    <p>
-                        Luxury Fit
-                    </p>
-
-                </div>
-
-                <strong>
-                    $90
-                </strong>
 
             </div>
 
 
             <button
-                class="add-cart"
+                class="close-menu"
+                id="close-menu"
                 type="button"
+                aria-label="Close menu"
             >
-                ADD TO BAG
+                ×
             </button>
 
-        </article>
+        </div>
 
 
+        <nav class="mobile-navigation">
 
-        <!-- PRODUCT 3 -->
+            <a href="#home">
+                سەرەتا
+            </a>
 
-        <article
-            class="product-card"
-            data-type="limited"
-        >
+            <a href="#categories">
+                بەشەکان
+            </a>
 
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
+            <a href="#new-arrivals">
+                بەرهەمە نوێیەکان
+            </a>
 
+            <a href="#brands">
+                بڕاندەکان
+            </a>
 
-            <div class="product-image product-three">
+            <a href="#about">
+                دەربارەی ئێمە
+            </a>
 
-                <span class="product-tag">
-                    LIMITED
-                </span>
+            <a href="#contact">
+                پەیوەندی
+            </a>
 
-                <div class="puffer">
+        </nav>
 
-                    <div class="puffer-logo">
-                        TT
-                    </div>
 
-                </div>
+        <div class="mobile-menu-footer">
 
-            </div>
+            <span>
+                ORIGINAL BRANDS
+            </span>
 
+            <span>
+                PREMIUM STYLE
+            </span>
 
-            <div class="product-info">
+        </div>
 
-                <div>
+    </aside>
 
-                    <h2>
-                        Puffer Jacket
-                    </h2>
 
-                    <p>
-                        Winter Collection
-                    </p>
+    <!-- =========================================================
+         SEARCH PANEL
+    ========================================================== -->
 
-                </div>
-
-                <strong>
-                    $250
-                </strong>
-
-            </div>
-
-
-            <button
-                class="add-cart"
-                type="button"
-            >
-                ADD TO BAG
-            </button>
-
-        </article>
-
-
-
-        <!-- PRODUCT 4 -->
-
-        <article
-            class="product-card"
-            data-type="limited"
-        >
-
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
-
-
-            <div class="product-image product-four">
-
-                <span class="product-tag">
-                    LIMITED
-                </span>
-
-                <div class="sneaker">
-
-                    <div class="sneaker-logo">
-                        TT
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div>
-
-                    <h2>
-                        Trillionaire Sneakers
-                    </h2>
-
-                    <p>
-                        Limited Edition
-                    </p>
-
-                </div>
-
-                <strong>
-                    $180
-                </strong>
-
-            </div>
-
-
-            <button
-                class="add-cart"
-                type="button"
-            >
-                ADD TO BAG
-            </button>
-
-        </article>
-
-
-
-        <!-- PRODUCT 5 -->
-
-        <article
-            class="product-card"
-            data-type="all"
-        >
-
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
-
-
-            <div class="product-image product-five">
-
-                <span class="product-tag">
-                    ICON
-                </span>
-
-                <div class="cap">
-
-                    <div class="cap-logo">
-                        TT
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div>
-
-                    <h2>
-                        Classic Cap
-                    </h2>
-
-                    <p>
-                        Adjustable Fit
-                    </p>
-
-                </div>
-
-                <strong>
-                    $60
-                </strong>
-
-            </div>
-
-
-            <button
-                class="add-cart"
-                type="button"
-            >
-                ADD TO BAG
-            </button>
-
-        </article>
-
-
-
-        <!-- PRODUCT 6 -->
-
-        <article
-            class="product-card"
-            data-type="all"
-        >
-
-            <button
-                class="favorite"
-                type="button"
-            >
-                ♡
-            </button>
-
-
-            <div class="product-image product-six">
-
-                <span class="product-tag">
-                    ESSENTIAL
-                </span>
-
-                <div class="pants">
-
-                    <div class="pants-logo">
-                        TT
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div>
-
-                    <h2>
-                        Essential Sweatpants
-                    </h2>
-
-                    <p>
-                        Comfort Fit
-                    </p>
-
-                </div>
-
-                <strong>
-                    $100
-                </strong>
-
-            </div>
-
-
-            <button
-                class="add-cart"
-                type="button"
-            >
-                ADD TO BAG
-            </button>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-    class="about"
-    id="about"
->
-
-    <div class="gold-label">
-        MORE THAN FASHION
-    </div>
-
-    <h2>
-        A lifestyle.
-    </h2>
-
-    <p>
-        Original brands. Premium style.
-        Curated for those who expect more.
-    </p>
-
-</section>
-
-
-
-<!-- =========================
-     BRANDS
-========================= -->
-
-<section
-    class="brands"
-    id="brands"
->
-
-    <div class="gold-label">
-        OUR BRANDS
-    </div>
-
-    <h2>
-        Recognized names.
-    </h2>
-
-    <div class="brand-list">
-
-        <span>
-            LOUIS VUITTON
-        </span>
-
-        <span>
-            GUCCI
-        </span>
-
-        <span>
-            BALENCIAGA
-        </span>
-
-        <span>
-            NIKE
-        </span>
-
-        <span>
-            ADIDAS
-        </span>
-
-        <span>
-            PRADA
-        </span>
-
-        <span>
-            OFF-WHITE™
-        </span>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    class="contact"
-    id="contact"
->
-
-    <div class="gold-label">
-        CONNECT WITH US
-    </div>
-
-    <h2>
-        Stay in the collection.
-    </h2>
-
-
-    <form id="newsletter">
-
-        <input
-            type="email"
-            placeholder="Your email address"
-            required
-        >
-
-        <button type="submit">
-            JOIN →
-        </button>
-
-    </form>
-
-
-    <p id="formMessage"></p>
-
-</section>
-
-</main>
-
-
-
-<!-- =========================
-     SEARCH OVERLAY
-========================= -->
-
-<div
-    class="search-overlay"
-    id="searchOverlay"
->
-
-    <button
-        class="close-search"
-        id="closeSearch"
-        type="button"
+    <div
+        class="search-panel"
+        id="search-panel"
+        aria-hidden="true"
     >
-        ×
-    </button>
+
+        <div class="search-panel-inner">
+
+            <button
+                class="search-close"
+                id="search-close"
+                type="button"
+                aria-label="Close search"
+            >
+                ×
+            </button>
 
 
-    <div class="search-container">
+            <div class="search-label">
+                SEARCH
+            </div>
 
-        <div class="gold-label">
-            SEARCH COLLECTION
+
+            <div class="search-input-wrapper">
+
+                <input
+                    id="search-input"
+                    type="search"
+                    placeholder="گەڕان بۆ بەرهەم..."
+                    autocomplete="off"
+                >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle
+                        cx="10.8"
+                        cy="10.8"
+                        r="6.8"
+                    ></circle>
+
+                    <path
+                        d="M16 16L21 21"
+                    ></path>
+                </svg>
+
+            </div>
+
+
+            <div
+                class="search-results"
+                id="search-results"
+            ></div>
+
         </div>
 
-        <input
-            id="searchInput"
-            type="search"
-            placeholder="Search products..."
+    </div>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            id="home"
         >
 
-        <div id="searchResults"></div>
+            <div class="hero-background"></div>
 
-    </div>
-
-</div>
+            <div class="hero-overlay"></div>
 
 
+            <div class="hero-content">
 
-<!-- =========================
-     FOOTER
-========================= -->
+                <div class="hero-eyebrow">
 
-<footer>
+                    ORIGINAL BRANDS
+                    <span>|</span>
+                    PREMIUM STYLE
 
-    <div class="footer-logo">
+                </div>
 
-        <div class="logo-square">
-            TC
+
+                <h1 class="hero-title rabar">
+
+                    تڕیلیۆنێر
+
+                    <br>
+
+                    کۆلەکشن
+
+                </h1>
+
+
+                <div class="hero-location rabar">
+
+                    <span class="location-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+                            ></path>
+
+                            <circle
+                                cx="12"
+                                cy="9"
+                                r="2.3"
+                            ></circle>
+
+                        </svg>
+
+                    </span>
+
+                    بەختیاری - نزیک گۆڵان مول
+
+                </div>
+
+
+                <div class="gold-line"></div>
+
+
+                <div class="hero-slogan">
+
+                    <span>
+                        MORE THAN FASHION
+                    </span>
+
+                    <span>
+                        A LIFESTYLE
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="#new-arrivals"
+                    class="primary-button rabar"
+                >
+
+                    کڕین ئێستا
+
+                    <span>
+                        ←
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-scroll">
+
+                <span></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATEGORIES
+        ====================================================== -->
+
+        <section
+            class="section categories-section"
+            id="categories"
+        >
+
+            <div class="category-grid">
+
+
+                <!-- MEN -->
+                <a
+                    href="#new-arrivals"
+                    class="category-card category-men"
+                >
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <h2 class="rabar">
+                            پیاوان
+                        </h2>
+
+                        <div class="category-line"></div>
+
+                        <span class="rabar">
+                            کڕین ئێستا
+                            ←
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- WOMEN -->
+                <a
+                    href="#new-arrivals"
+                    class="category-card category-women"
+                >
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <h2 class="rabar">
+                            ژنان
+                        </h2>
+
+                        <div class="category-line"></div>
+
+                        <span class="rabar">
+                            کڕین ئێستا
+                            ←
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- SHOES -->
+                <a
+                    href="#new-arrivals"
+                    class="category-card category-shoes"
+                >
+
+                    <div class="category-overlay"></div>
+
+                    <div class="category-content">
+
+                        <h2 class="rabar">
+                            پێڵاو
+                        </h2>
+
+                        <div class="category-line"></div>
+
+                        <span class="rabar">
+                            کڕین ئێستا
+                            ←
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEW ARRIVALS
+        ====================================================== -->
+
+        <section
+            class="section products-section"
+            id="new-arrivals"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="section-overline">
+                        FEATURED
+                    </div>
+
+                    <h2 class="section-title rabar">
+                        بەرهەمە نوێیەکان
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-all rabar"
+                >
+                    بینینی هەموو
+                    →
+                </a>
+
+            </div>
+
+
+            <div
+                class="products-grid"
+                id="products-grid"
+            >
+
+
+                <!-- PRODUCT 1 -->
+                <article
+                    class="product-card"
+                    data-name="تی شێرت بالەنسیگا"
+                    data-category="پیاوان"
+                >
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                        aria-label="Add to wishlist"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-image-1">
+
+                        <span class="product-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <h3 class="product-name rabar">
+                            تی شێرت بالەنسیگا
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="product-price">
+                                $450
+                            </span>
+
+                            <button
+                                class="add-cart rabar"
+                                type="button"
+                                data-product="تی شێرت بالەنسیگا"
+                                data-price="450"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article
+                    class="product-card"
+                    data-name="نایک ایر فورس"
+                    data-category="پێڵاو"
+                >
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                        aria-label="Add to wishlist"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-image-2">
+
+                        <span class="product-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <h3 class="product-name rabar">
+                            نایک ایر فورس
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="product-price">
+                                $120
+                            </span>
+
+                            <button
+                                class="add-cart rabar"
+                                type="button"
+                                data-product="نایک ایر فورس"
+                                data-price="120"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article
+                    class="product-card"
+                    data-name="کەمیزی لۆی ڤیتۆن"
+                    data-category="پیاوان"
+                >
+
+                    <button
+                        class="wishlist-button"
+                        type="button"
+                        aria-label="Add to wishlist"
+                    >
+                        ♡
+                    </button>
+
+
+                    <div class="product-image product-image-3">
+
+                        <span class="product-badge rabar">
+                            نوێ
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <h3 class="product-name rabar">
+                            کەمیزی لۆی ڤیتۆن
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="product-price">
+                                $620
+                            </span>
+
+                            <button
+                                class="add-cart rabar"
+                                type="button"
+                                data-product="کەمیزی لۆی ڤیتۆن"
+                                data-price="620"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BRAND MESSAGE
+        ====================================================== -->
+
+        <section
+            class="brand-message"
+            id="brands"
+        >
+
+            <div class="brand-message-content">
+
+                <div class="brand-message-overline">
+                    ORIGINAL BRANDS
+                </div>
+
+                <h2 class="rabar">
+                    بڕاندەی ئەسڵ
+                </h2>
+
+                <p class="rabar">
+                    شێوازی تایبەت بۆ تۆ
+                </p>
+
+                <div class="brand-message-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section
+            class="section about-section"
+            id="about"
+        >
+
+            <div class="about-content">
+
+                <div class="section-overline">
+                    TRILLIONAIRE COLLECTION
+                </div>
+
+                <h2 class="section-title rabar">
+                    زیاتر لە فاشن
+                </h2>
+
+                <p class="rabar">
+                    ئێمە کۆمەڵێک لە بڕاندە ئەسڵی و پڕیمیۆمەکان
+                    پێشکەش دەکەین بۆ ئەو کەسانەی کە جۆر و شێوازی
+                    تایبەتی خۆیان هەیە.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="contact-content">
+
+                <div class="section-overline">
+                    CONTACT
+                </div>
+
+                <h2 class="rabar">
+                    پەیوەندیمان پێوە بکە
+                </h2>
+
+
+                <a
+                    href="tel:+9647501234567"
+                    class="contact-item"
+                >
+
+                    <span class="contact-icon">
+                        ☎
+                    </span>
+
+                    <span dir="ltr">
+                        +964 750 123 4567
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="contact-item"
+                >
+
+                    <span class="contact-icon">
+                        ◎
+                    </span>
+
+                    <span>
+                        TRILLIONAIRE COLLECTION
+                    </span>
+
+                </a>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ●
+                    </span>
+
+                    <span class="rabar">
+                        هەولێر، گۆڵان مول
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+
+            <div class="logo-symbol">
+                TN
+            </div>
+
+            <div class="logo-text">
+
+                <span>
+                    TRILLIONAIRE
+                </span>
+
+                <small>
+                    COLLECTION
+                </small>
+
+            </div>
+
         </div>
 
-        <div>
 
-            <strong>
-                TRILLIONAIRE
-            </strong>
+        <p class="footer-tagline">
+            ORIGINAL BRANDS · PREMIUM STYLE
+        </p>
 
-            <small>
-                COLLECTION
-            </small>
+
+        <div class="footer-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#new-arrivals">
+                Shop
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
 
         </div>
 
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Trillionaire Collection
+            </span>
+
+            <span>
+                Erbil, Iraq
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         MOBILE BOTTOM NAVIGATION
+    ========================================================== -->
+
+    <nav class="bottom-navigation">
+
+
+        <a
+            href="#home"
+            class="bottom-nav-item active"
+        >
+
+            <span class="bottom-nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M3 10.5 12 3l9 7.5"
+                    ></path>
+
+                    <path
+                        d="M5.5 9.5V21h13V9.5"
+                    ></path>
+
+                </svg>
+
+            </span>
+
+            <span class="rabar">
+                سەرەتا
+            </span>
+
+        </a>
+
+
+        <a
+            href="#new-arrivals"
+            class="bottom-nav-item"
+        >
+
+            <span class="bottom-nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <rect
+                        x="4"
+                        y="4"
+                        width="6"
+                        height="6"
+                    ></rect>
+
+                    <rect
+                        x="14"
+                        y="4"
+                        width="6"
+                        height="6"
+                    ></rect>
+
+                    <rect
+                        x="4"
+                        y="14"
+                        width="6"
+                        height="6"
+                    ></rect>
+
+                    <rect
+                        x="14"
+                        y="14"
+                        width="6"
+                        height="6"
+                    ></rect>
+
+                </svg>
+
+            </span>
+
+            <span class="rabar">
+                کڕین
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="bottom-nav-item"
+            id="wishlist-nav"
+        >
+
+            <span class="bottom-nav-icon">
+                ♡
+            </span>
+
+            <span class="rabar">
+                دڵخوازەکان
+            </span>
+
+        </a>
+
+
+        <a
+            href="#contact"
+            class="bottom-nav-item"
+        >
+
+            <span class="bottom-nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5"
+                    ></circle>
+
+                    <path
+                        d="M5 21c.7-4.1 3-6 7-6s6.3 1.9 7 6"
+                    ></path>
+
+                </svg>
+
+            </span>
+
+            <span class="rabar">
+                هەژمار
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =========================================================
+         CART DRAWER
+    ========================================================== -->
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+    ></div>
+
+
+    <aside
+        class="cart-drawer"
+        id="cart-drawer"
+    >
+
+        <div class="cart-header">
+
+            <h2 class="rabar">
+                سەبەتەکەت
+            </h2>
+
+            <button
+                id="close-cart"
+                type="button"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cart-items"
+        >
+
+            <div class="empty-cart">
+
+                <div class="empty-cart-icon">
+                    🛍
+                </div>
+
+                <p class="rabar">
+                    سەبەتەکەت بەتاڵە
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span class="rabar">
+                    کۆی گشتی
+                </span>
+
+                <strong id="cart-total">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button rabar"
+                type="button"
+                id="checkout-button"
+            >
+                تەواوکردنی کڕین
+                →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         TOAST MESSAGE
+    ========================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    >
+        <span id="toast-message"></span>
     </div>
 
 
-    <div class="footer-location">
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-        📍 به‌ختیاری - نزیک گۆڵان موڵ
-
-        <br>
-
-        <small>
-            ERBIL, KURDISTAN
-        </small>
-
-    </div>
-
-
-    <div class="socials">
-
-        INSTAGRAM
-
-        <span>•</span>
-
-        TIKTOK
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2026 Trillionaire Collection
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
